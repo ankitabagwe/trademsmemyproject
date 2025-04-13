@@ -1,0 +1,5 @@
+<div class="main-container" >
+    <app-chatlist (selectSeller)="onSellerSelect($event)"></app-chatlist>
+    <app-chatsection  [conversationId]="selectedConversationId"  [sellerName]="selectedSellerName"></app-chatsection>
+  </div>
+  

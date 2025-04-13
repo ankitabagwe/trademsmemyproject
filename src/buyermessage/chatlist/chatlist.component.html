@@ -1,0 +1,30 @@
+<div class="chat-list">
+
+ 
+  
+  <div class="search">
+    <div class="clr">
+      <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M15.7936 14.6815L12.1879 11.1061C14.3461 8.4183 14.143 4.46271 11.68 2.00315C10.3851 0.709977 8.68385 0 6.85567 0C5.02749 0 3.30088 0.709977 2.00592 2.00315C0.710958 3.29632 0 4.99519 0 6.84621C0 8.69722 0.710958 10.3961 2.00592 11.6893C3.30088 12.9571 5.0021 13.6924 6.85567 13.6924C8.40454 13.6924 9.92802 13.1599 11.1214 12.1964L14.7018 15.7718C14.8541 15.9239 15.0319 16 15.235 16C15.4381 16 15.6412 15.9239 15.7682 15.7718C16.0729 15.4675 16.0729 14.9857 15.7936 14.6815ZM12.1879 6.84621C12.1879 8.26616 11.6292 9.61004 10.6136 10.5989C9.59793 11.5878 8.27758 12.171 6.85567 12.171C5.43375 12.171 4.08801 11.6132 3.09775 10.5989C2.10748 9.58469 1.52348 8.26616 1.52348 6.84621C1.52348 5.42625 2.08209 4.08237 3.09775 3.09347C4.1134 2.10457 5.40836 1.52138 6.85567 1.52138C8.27758 1.52138 9.62333 2.07922 10.6136 3.09347C11.6039 4.10772 12.1879 5.4009 12.1879 6.84621Z" fill="#2AA699">
+      </path></svg>
+    </div>
+    <div class="separator"></div>
+
+    <div class="searchform">
+      <form id="insideform">
+        <input id="searchauto" type="text" placeholder="Name, Product, City, Company or Mobile" autocomplete="off">
+      </form>
+    </div>
+  </div>
+ <div class="chats">
+  <ul>
+    <li *ngFor="let conversation of conversations" (click)="onSellerSelect(conversation)">
+      <div>
+        <p><strong>{{(conversation.sellerName|| 'Unknown') | camelCaseToSpace}} </strong></p>
+        <p>{{ conversation.lastMessage }}</p>
+      </div>
+      <span class="timestamp">{{ conversation.timestamp | date:'short' }}</span>
+    </li>
+  </ul>
+ </div>
+</div>

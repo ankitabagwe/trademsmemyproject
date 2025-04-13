@@ -1,0 +1,142 @@
+/* ---------------------------
+   Global Base
+----------------------------- */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+  
+  /* ---------------------------
+     Navbar Header
+  ----------------------------- */
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #7D0A0A; /* IndiaMART deep blue */
+    padding: 10px 16px;
+    color: #fff;
+  }
+  
+  /* Logo Section */
+  .logo img {
+    height: 32px; /* Adjust if needed */
+    width: auto;
+    vertical-align: middle;
+  }
+  
+  /* Search Container */
+  .search-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #fff;
+    border-radius: 4px;
+    padding: 4px 8px;
+    flex: 1;
+    margin: 0 20px;
+  }
+  
+  /* Dropdown inside search */
+  .search-container select {
+    border: none;
+    outline: none;
+    background: transparent;
+    font-size: 0.9rem;
+    color: #333;
+    cursor: pointer;
+    min-width: 100px;
+  }
+  
+  /* Text Input in search */
+  .search-container input[type="text"] {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 0.9rem;
+    color: #333;
+  }
+  
+  /* Search Button */
+  .search-container .search-btn {
+    background-color: #009688; /* Teal accent */
+    border: none;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.2s ease;
+  }
+  
+  .search-container .search-btn:hover {
+    background-color: #007e6b; /* Darker teal on hover */
+  }
+  
+  .search-container .search-btn i {
+    margin-right: 4px;
+    font-size: 1rem;
+  }
+  
+  /* ---------------------------
+     Right-side Actions
+  ----------------------------- */
+  .actions {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+  }
+  
+  /* "Buy With IndiaMART" Button */
+  .actions button {
+    background-color: #fff;
+    color: #1C4C90;
+    border: none;
+    padding: 6px 12px;
+    border-radius: 4px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+  
+  .actions button:hover {
+    background-color: #f0f0f0;
+  }
+  
+  /* Notification Icon & Badge */
+  .notifications {
+    position: relative;
+    font-size: 1.2rem;
+    color: #fff;
+    cursor: pointer;
+  }
+  
+  .notifications span {
+    position: absolute;
+    top: -8px;
+    right: -12px;
+    background-color: #ff5722;
+    color: #fff;
+    font-size: 0.7rem;
+    border-radius: 50%;
+    padding: 2px 6px;
+    min-width: 16px;
+    text-align: center;
+  }
+  
+  /* Navbar Links */
+  .actions a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s ease;
+  }
+  
+  .actions a:hover {
+    color: #cde0ff;
+  }
+  

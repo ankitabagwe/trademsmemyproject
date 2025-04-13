@@ -1,0 +1,88 @@
+
+  /* ///////////////////// */
+
+  .chat-list {
+    /* width: 30%; */
+    border-right: 1px solid #ccc;
+    padding: 10px;
+    overflow-y: auto;
+    height: 100vh;
+    background-color: #e8eaeb;
+  }
+  
+  .chat-list h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .chat-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .chat-list li {
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .chat-list li:hover {
+    background-color: #e6f7ff;
+  }
+  
+  .chat-list li div {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .chat-list li p {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .chat-list li p strong {
+    font-weight: bold;
+    color: #333;
+  }
+
+  .search {
+    display: flex; /* Align items in a row */
+    gap: 10px; /* Space between items */
+  }
+
+  .clr {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+  }
+
+  .separator {
+    width: 1px;
+    height: 24px;
+    background-color: #ccc; /* Color for the separator line */
+  }
+
+  .searchform{
+    flex: 1;
+  }
+  
+ 
+.search input {
+  border: 0;
+  float: left;
+  font-size: 12px;
+  color: #191919;
+  width: 100%;
+  font-family: arial;
+}
+
+
+

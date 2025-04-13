@@ -1,0 +1,46 @@
+/* .main-container {
+    display: flex;
+    height: 100vh;
+    
+    gap: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    .sidebar {
+      display: none;
+    }
+    .chat-container {
+      width: 100%;
+    }
+  }
+
+  
+  app-chatlist {
+    width: 30%;
+    border-right: 1px solid black;
+  }
+  app-chatsection {
+    width: 70%; 
+
+  }
+  
+   */
+
+   .main-container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .main-container app-chatlist {
+    flex: 1;
+    max-width: 30%;
+  }
+  
+  .main-container app-chatsection {
+    flex: 2;
+    width: 70%; 
+  }

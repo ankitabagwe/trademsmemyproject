@@ -1,0 +1,11 @@
+<div class="chat-list">
+  <h3>conversation</h3>
+  <ul>
+    <li *ngFor="let conversation of conversations" (click)="onBuyerSelect(conversation.buyerId)">
+      <div>
+        <p><strong>Buyer: </strong>{{ conversation.buyerId }}</p>
+        <p><strong>Last Message: </strong>{{ conversation.Message }}</p>
+      </div>
+    </li>
+  </ul>
+</div>

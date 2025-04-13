@@ -1,0 +1,18 @@
+.main-container {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  
+  .main-container app-chatlist {
+    flex: 1;
+    max-width: 30%;
+  }
+  
+  .main-container app-chatsection {
+    flex: 2;
+    width: 70%; 
+  }

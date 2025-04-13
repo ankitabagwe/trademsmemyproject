@@ -1,0 +1,150 @@
+<app-navbar></app-navbar>
+<div class="container-md mt-md-4">
+
+<div class="row Buisness-details ">
+    
+        
+<div class="col-md-7">
+    <div class="row ">
+        <div class="col step bottombordersuccess">
+            <img src="check.png">
+            <p>Create Account</p>
+        </div>
+        <div class="col step bottombordercurrent">
+            <img src="check.png">
+            <p>Business Details</p>
+        </div>
+        <div class="col step ">
+            <img src="productdetails1.png">
+            <p>Product Details</p>
+        </div>
+       
+        <div class="col step">
+            <img src="addgst.png">
+            <p>Add GST</p>
+        </div>
+        </div>
+   
+<form (ngSubmit)="verifylater()" [formGroup]="buisnessdetails">
+<div class="d-inline-flex">
+    <img src="righttick.jpg" height="50px" width="50px" >
+    <p class="mt-md-3">Account created successfully</p>
+</div>
+<h1>Business Details</h1>
+<p>Start adding your business details:</p>
+<div class="mb-md-4">
+<div class="form-floating mb-0">
+    <img class="icon" src="icon1.ico">
+    <div class="divider"></div>
+    <input type="text"  class="form-control" id="floatingname" placeholder=" " (keypress)="onkeypress()" name="Name" formControlName="Name">
+    <label for="floatingname" style="margin-right: 1000px;">Your Name*</label>
+    
+</div>
+ <div class="text-danger" >
+    <span *ngIf="user?.invalid && !user?.errors?.['minlength'] && !user?.errors?.['maxlength'] && !user?.errors?.['pattern']">Please enter Name*</span> 
+    <span *ngIf="user?.errors?.['minlength']?.requiredLength > user?.errors?.['minlength']?.actualLength">Name requires atleast 3 characters</span>
+    <span *ngIf="user?.errors?.['maxlength']?.actualLength > user?.errors?.['maxlength']?.requiredLength">Name cannot be more than 30 characters</span>
+    <span *ngIf="user?.errors?.['pattern']">Please input alphabet characters only</span>
+</div>
+</div>
+<div class="mb-md-4">
+    <div class="form-floating mb-0">
+        <img class="icon" src="icon2.ico">
+        <div class="divider"></div>
+        <input type="text"  class="form-control" id="floatingname" placeholder=" " (keypress)="onkeypress()" name="Companydetails"  formControlName="Companydetails" >
+        <label for="floatingname" style="margin-right: 1000px;">Company/Buisness/ShopName*</label>
+    </div>
+    <div class="text-danger">
+        <span *ngIf="companydetails?.errors?.['required'] && !companydetails?.errors?.['minlength'] && !companydetails?.errors?.['maxlength'] && !companydetails?.errors?.['pattern']">
+            Company name cannot be blank
+        </span> 
+        <span *ngIf="companydetails?.errors?.['minlength']">
+            Company name must be between 4 and 100 characters long
+        </span>
+        <span *ngIf="companydetails?.errors?.['maxlength']">
+            Company name must be between 4 and 100 characters long
+        </span>
+        <span *ngIf="companydetails?.errors?.['pattern']">
+            Company name must contain at least 1 alphabet
+        </span>
+     </div>
+</div>
+<div class="row mb-md-4">
+<div class="col-md-4">
+    <div class="form-floating mb-0">
+        <img class="icon" src="icon2.ico">
+        <div class="divider"></div>
+      <input type="text" class="form-control" id="floatingpincode" placeholder=" " formControlName="Pincode">
+      <label for="floatingpincode">Pin Code*</label>
+     
+    </div>
+    <div class="text-danger">
+      <span *ngIf="pincode?.invalid && pincode?.touched">Enter a valid 6-digit Indian Pin Code</span>
+    </div>
+  </div>
+
+  <!-- City Field -->
+  <div class="col-md-4">
+    <div class="form-floating mb-0">
+        <img class="icon" src="icon2.ico">
+        <div class="divider"></div>
+      <input type="text" class="form-control" id="floatingcity" placeholder=" " formControlName="City">
+      <label for="floatingcity">City*</label>
+    </div>
+    <div class="text-danger">
+      <span *ngIf="city?.invalid && city?.touched">City should only contain alphabets</span>
+    </div>
+  </div>
+
+  <!-- State Field -->
+  <div class="col-md-4">
+    <div class="form-floating mb-0">
+        <img class="icon" src="icon2.ico">
+        <div class="divider"></div>
+      <input type="text" class="form-control" id="floatingstate" placeholder=" " formControlName="State">
+      <label for="floatingstate">State*</label>
+    </div>
+    <div class="text-danger">
+      <span *ngIf="state?.invalid && state?.touched">State should only contain alphabets</span>
+    </div>
+  </div>
+</div>
+
+<div class="mb-md-4">
+    <div class="form-floating mb-0">
+        <img class="icon" src="icon3.ico">
+        <div class="divider"></div>
+        <input type="text"  class="form-control" id="floatingname" placeholder=" " (keypress)="onkeypress()"  name="emailaddress" formControlName="emailaddress">
+        <label for="floatingname" style="margin-right: 1000px;">Email ID*</label>
+    </div>
+    <div class="text-danger">
+    <span *ngIf="emailid?.errors?.['required'] && !companydetails?.errors?.['email']">Please enter your email address*</span> 
+    
+    <span *ngIf="emailid?.errors?.['email']">Please enter a valid email address</span>
+        
+     </div>
+</div>
+
+
+
+
+    <input class="btn btn-primary marginset"  type="submit" value="Verify Later" >
+   
+   
+
+        </form>
+    </div>
+
+    <div class="profile-box col-md-5 mt-5">
+        <div  class="profile-header" >
+            <img src="profilesofar.png">
+        <p class="profile-title">Your Profile So Far</p></div>
+       
+        <div class="profile-info">
+            <ul>
+              <li>Mobile number: {{mobilenumber}}</li>
+            </ul>
+          </div>
+      </div>
+    </div>
+</div>

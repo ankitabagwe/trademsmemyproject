@@ -1,0 +1,194 @@
+/* 
+ 
+
+  .chat-list {
+  
+    border-right: 1px solid #ccc;
+    padding: 10px;
+    overflow-y: auto;
+    height: 100vh;
+    background-color: #e8eaeb;
+  }
+  
+  .chat-list h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: #333;
+  }
+  
+  .chat-list ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .chat-list li {
+    padding: 10px;
+    margin-bottom: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #fff;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .chat-list li:hover {
+    background-color: #e6f7ff;
+  }
+  
+  .chat-list li div {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .chat-list li p {
+    margin: 0;
+    font-size: 14px;
+    color: #555;
+  }
+  
+  .chat-list li p strong {
+    font-weight: bold;
+    color: #333;
+  }
+
+  .search {
+    display: flex; 
+    gap: 10px; 
+  }
+
+  .clr {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+  }
+
+  .separator {
+    width: 1px;
+    height: 24px;
+    background-color: #ccc; 
+  }
+
+  .searchform{
+    flex: 1;
+  }
+  
+ 
+.search input {
+  border: 0;
+  float: left;
+  font-size: 12px;
+  color: #191919;
+  width: 100%;
+  font-family: arial;
+}
+
+
+ */
+
+
+ /* Overall container */
+.chat-list {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  background-color: #f0f0f0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Search bar at the top */
+.search {
+  display: flex;
+  align-items: center;
+  background-color: #fff;
+  padding: 8px 12px;
+  border-bottom: 1px solid #ddd;
+}
+
+.search .clr {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 8px;
+}
+
+.search .separator {
+  width: 1px;
+  height: 20px;
+  background-color: #ccc;
+  margin-right: 8px;
+}
+
+.search .searchform {
+  flex: 1;
+}
+
+.searchform form {
+  margin: 0;
+}
+
+.searchform input {
+  width: 100%;
+  padding: 6px 8px;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  font-size: 14px;
+}
+
+/* Chat list container */
+.chats {
+  flex: 1;
+  overflow-y: auto;
+  background-color: #fff;
+}
+
+/* Chat list items */
+.chats ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.chats li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 12px;
+  border-bottom: 1px solid #f0f0f0;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.chats li:hover {
+  background-color: #f5f5f5;
+}
+
+/* Left side: buyer info and last message */
+.chats li div {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.chats li p {
+  margin: 0;
+  font-size: 14px;
+  color: #333;
+}
+
+.chats li strong {
+  font-weight: 600;
+}
+
+/* Timestamp on the right */
+.timestamp {
+  font-size: 11px;
+  color: #999;
+  margin-left: 10px;
+}
+
+/* Optional: If you want a subtle divider for the first chat item */
+.chats li:first-child {
+  border-top: 1px solid #f0f0f0;
+}

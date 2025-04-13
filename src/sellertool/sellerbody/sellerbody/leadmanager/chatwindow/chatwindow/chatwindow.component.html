@@ -1,0 +1,17 @@
+<div class="chat-section">
+  <h3>chat with buyer </h3>
+  <div class="messages" >
+    <div *ngFor="let message of messages" [class.seller]="message.senderId === sellerId">
+      <p>{{ message.text }}</p>
+      <span>{{ message.timestamp | date: 'short' }}</span>
+    </div>
+  </div>
+  <div class="message-input">
+    <input
+      type="text"
+      [(ngModel)]="newMessageText"
+      placeholder="Type your message here..."
+    />
+    <button (click)="sendMessage()">Send</button>
+  </div>
+</div>

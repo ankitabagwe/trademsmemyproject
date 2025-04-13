@@ -1,0 +1,71 @@
+
+.container-fluid{
+    background-color: #2E3192;
+    padding: 0;
+    display: inline-block;
+    }
+    .navbar-brand{
+        color: white;
+        margin-right: 0;
+    }
+    
+    img{
+        width: 4cm;
+        height: 1.5cm;
+       
+    }
+    
+    .searchbox{
+        display: inline-flex;
+        margin-right: 10px;
+    }
+    .searchbtn1{
+        background-color: #009688; /* Teal background */
+      border-radius: 5px; /* Rounded corners */
+      padding: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 42px;
+      height: 35px;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+    }
+    
+    i {
+        width: 20px; /* Adjust icon size */
+        height: 20px;
+        justify-content: center;
+        filter: brightness(0) invert(1); /* Make icon white */
+      }
+    
+      #dropdownMenuButton{
+        color: black;
+        background-color: white;
+        font-size: small;
+        font-weight: bold;
+        height: 35px;
+        width: 120px;
+      }
+      
+      input{
+        width: 340px;
+        height: 35px;
+      }
+    
+    .getBestPrice{
+        display: inline;
+        margin-right: 90px;
+    }
+    #getBestPrice1{
+        color: black;
+        background-color: white;
+        font-size: small;
+        font-weight: bold;
+        height: 35px;
+        width: 120px;
+        border-width: 0px;
+        
+      }
+      .rightthings{
+        display: inline;
+      }

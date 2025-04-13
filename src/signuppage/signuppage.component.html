@@ -1,0 +1,69 @@
+
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary custom-navbar">
+    <div class="container-fluid">
+      <img src="bgremovelogo.png">
+      
+         <div class="searchbox">
+         
+          <div class="dropdown" >
+            <button (click)="getdrpdwn()" class="btn btn-secondary dropdown-toggle"  type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+             All india
+            </button>
+           
+          </div>
+          
+  
+  
+          <div class="textbtn">
+            <input #searchbtn (click)="getData(searchbtn.value)"  type="text" placeholder="enter product/service to search"/>
+          </div>
+  
+          <div class="searchbtn1">
+            <i class="bi bi-search"></i>
+          </div>
+          
+         </div>
+  
+         <div class="getBestPrice">
+          <button id="getBestPrice1">Get Best Price</button>
+         </div>
+         
+         <div class="rightthings">
+          <button id="selllertool">Shopping</button>
+          <button id="selllertool">Sell</button>
+          <button id="selllertool">Help</button>
+          <button id="selllertool">Messages</button>
+          <button id="selllertool" data-toggle="modal" data-target="#exampleModal" (click)="openModal()">Sign In</button>
+
+          <div class="modal fade" id="signInModal" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title" id="signInModalLabel">Sign In</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <form (submit)="submitPhoneNumber()">
+                    <div class="mb-3">
+                      <label for="phoneNumber" class="form-label">Mobile Number</label>
+                      <div class="input-group">
+                        <span class="input-group-text">
+                          <img src="path-to-flag-icon" alt="India Flag" style="width: 20px;">
+                        </span>
+                        <span class="input-group-text">+91</span>
+                        <input type="text" class="form-control" id="phoneNumber" placeholder="Enter Your Mobile Number" [(ngModel)]="phoneNumber" name="phoneNumber" required>
+                      </div>
+                    </div>
+                    <button type="submit"   class="btn btn-success w-100">Submit</button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+         </div>
+        </div>
+      </nav>
+

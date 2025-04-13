@@ -1,0 +1,5 @@
+<div class="chatcontainer">
+    <app-chatlist [sellerId]="sellerId" (selectBuyer)="onBuyerSelect($event)"></app-chatlist>
+    <app-chatwindow *ngIf="selectedBuyerId" [sellerId]="sellerId" [buyerId]="selectedBuyerId"></app-chatwindow>
+</div>
+

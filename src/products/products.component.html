@@ -1,0 +1,181 @@
+<div class="container">
+    <div class="row">
+        <!-- Left Section (Product Details) -->
+        <div class="col-md-9">
+            <h1 style="color: #2e3192; font-weight: bold; font-size: 20px;">Add More Products/services:</h1>
+           
+            <div class="row">
+                <!-- Image Upload Section -->
+                <div class="col-md-3 text-center">
+                    <div class="photo-box">
+                        <img [src]="url" (click)="fileInput.click()" class="photo-preview" alt="Selected Photo">
+                        <input type="file" #fileInput (change)="onFileSelected($event)" hidden>
+                    </div>
+
+                    <!-- Video & PDF Upload Icons -->
+                    <div class="row mt-2">
+                        <!-- Video Upload Section -->
+                        <div class="col-6 text-center">
+                            <div class="icon-box" (click)="showVideoInput = true">
+                                <i id="youtubeIcon" class="bi bi-youtube"></i>
+                                <p>Add Video</p>
+                            </div>
+                            <!-- Video Link Input -->
+                            <div *ngIf="showVideoInput">
+                                <input type="text" [(ngModel)]="youtubeLink" placeholder="Enter video link" class="form-control">
+                                <button class="btn btn-primary btn-sm mt-1" (click)="uploadVideo()">Save</button>
+                            </div>
+                        </div>
+                    
+                        <!-- PDF Upload Section -->
+                        <div class="col-6 text-center">
+                            <div class="icon-box" (click)="pdfInput.click()">
+                                <i id="pdfIcon" class="bi bi-file-earmark-pdf"></i>
+                                <p>Add PDF</p>
+                            </div>
+                            <input type="file" #pdfInput accept="application/pdf" (change)="uploadPDF($event)" hidden>
+                            <!-- Show PDF name when selected -->
+                            <div *ngIf="pdfFile">
+                                <p>{{ pdfFile.name }}</p>
+                                <button class="btn btn-primary btn-sm mt-1" (click)="savePdf()">Save</button>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+
+                <!-- Product Form Section -->
+                <div class="col-md-9">
+                    <form #productForm="ngForm">
+                        <label for="productName">Product/Service Name</label>
+                        <input type="text" id="productName" class="form-control" placeholder="Enter product name" [(ngModel)]="formData.productName" name="productName">
+                        <br>
+                        <!-- Price & Unit Section -->
+                        <div class="row price-unit-container">
+                            <div class="col-auto">
+                                <label for="Price">Price</label>
+                                <div class="input-group" style="max-width: 200px;">
+                                    <span class="input-group-text" style="background-color: #f8f9fa; border-right: none; padding: 6px 10px;">
+                                        ₹
+                                    </span>
+                                    <input type="number" id="price" class="form-control" placeholder="Enter price" 
+                                        [(ngModel)]="formData.Price" name="Price" style="border-left: none;">
+                                </div>
+                                
+                                
+                            </div>
+                            <div class="col-auto">
+                              <label>Unit</label>
+                              <button (click)="toggleDropdownunit()" class="btn btn-success dropdown-toggle w-100" type="button">
+                                  {{ formData.unit ? formData.unit : 'Select Unit' }}
+                              </button>
+                          
+                              <ul *ngIf="isUnitOpen" class="dropdown-menu show w-100 position-absolute">
+                                  <li *ngFor="let unit of units">
+                                      <button type="button" class="dropdown-item" (click)="selectUnit(unit)">{{ unit }}</button>
+                                  </li>
+                              </ul>
+                          </div>
+                        </div>
+
+                        <!-- Shipping Options -->
+                    
+                        <br>
+
+                        <!-- Tax Options -->
+                       <!-- Shipping Options -->
+<label class="shipping-label">Shipping:</label>
+<input type="radio" name="shipping" [(ngModel)]="formData.shippingOption" value="included"> Included
+<input type="radio" name="shipping" [(ngModel)]="formData.shippingOption" value="excluded"> Excluded
+
+<br><br>
+
+<!-- Tax Options -->
+<label class="tax-label">Tax:</label>
+<input type="radio" name="tax" [(ngModel)]="formData.taxOption" value="included"> Included
+<input type="radio" name="tax" [(ngModel)]="formData.taxOption" value="excluded"> Excluded
+
+<br><br>
+
+<label>Product/Service Description</label>
+<textarea class="form-control product-description" [(ngModel)]="formData.productdescription" placeholder="Enter details"></textarea>
+<p class="char-limit">0 character (maximum of 4000) including formatting.</p>
+
+                    </form>
+                </div>
+               
+            </div>
+            <button class="btn btn-primary mt-3" (click)="onSubmit()">Save</button>
+           
+        </div>
+
+        <!-- Right Section (Profile Details) -->
+        <div class="showproduct">
+            <!-- <h2 style="color: #2e3192; font-weight: bold;">Products & Services</h2>
+        <div class="row">
+            <div class="col-md-2 m-md-3" *ngFor="let product of products | slice:0:1">
+                <div class="card" style="width: 15rem; height: 30rem;">
+                  <div class="d-flex justify-content-center mt-1">
+                    <img class="card-img-top image" [src]="product.file"  alt="{{ product.productName }}">
+                  </div>
+                  <div class="card-body text-center">
+                    <p class="card-title">{{ product.productname }}</p>
+                    <p class="card-text">Rs {{ product.price }}</p>
+                    <p class="text-muted">{{ product.productdescription }}</p>
+                    <button style="background-color: red; color: white; font-weight: bold;"> Delete</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-2 m-md-3" *ngFor="let product of products | slice:1:2">
+                <div class="card" style="width: 15rem; height: 30rem;">
+                  <div class="d-flex justify-content-center mt-1">
+                    <img class="card-img-top image" [src]="product.file"  alt="{{ product.productName }}">
+                  </div>
+                  <div class="card-body text-center">
+                    <p class="card-title">{{ product.productname }}</p>
+                    <p class="card-text">Rs {{ product.price }}</p>
+                    <p class="text-muted">{{ product.productdescription }}</p>
+                    <button style="background-color: red; color: white; font-weight: bold;"> Delete</button>
+                  </div>
+                </div>
+              </div>
+
+              <div class="col-md-2 m-md-3" *ngFor="let product of products | slice:2:3">
+                <div class="card" style="width: 15rem; height: 30rem;">
+                  <div class="d-flex justify-content-center mt-1">
+                    <img class="card-img-top image" [src]="product.file"  alt="{{ product.productName }}">
+                  </div>
+                  <div class="card-body text-center">
+                    <p class="card-title">{{ product.productname }}</p>
+                    <p class="card-text">Rs {{ product.price }}</p>
+                    <p class="text-muted">{{ product.productdescription }}</p>
+                    <button style="background-color: red; color: white; font-weight: bold;" (click)="deleteProduct(product.id)"> Delete</button>
+                  </div>
+                </div>
+              </div>
+        </div> -->
+
+        <h2 style="color: #2e3192; font-weight: bold;">Products & Services</h2>
+        <div class="row">
+          <div class="col-md-2 m-md-3" *ngFor="let product of products">
+            <div class="card" style="width: 15rem; height: 30rem;">
+              <div class="d-flex justify-content-center mt-1">
+                <img class="card-img-top image" [src]="product.file" alt="{{ product.productname }}">
+              </div>
+              <div class="card-body text-center">
+                <p class="card-title">{{ product.productname }}</p>
+                <p class="card-text">Rs {{ product.price }}</p>
+                <p class="text-muted">{{ product.productdescription }}</p>
+                <button style="background-color: red; color: white; font-weight: bold;" (click)="deleteProduct(product.id)">
+                  Delete
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+    </div>
+
+  
+</div>

@@ -1,0 +1,175 @@
+<nav class="navbar">
+  <div class="logo">
+    <img src="bgremovelogo.png" alt="Logo" />
+  </div>
+  <div class="search-container">
+    <select>
+      <option>Buy Leads</option>
+      <!-- Add more options here -->
+    </select>
+    <input type="text" placeholder="Enter product / service to search" />
+    <button class="search-btn">
+      <i class="fa fa-search"></i>
+    </button>
+  </div>
+  <div class="actions">
+    <button style="color: #7D0A0A;">Buy With tradeMSME</button>
+   
+    <a (click)="leadmanager()">Lead Manager</a>
+    <a (click)="buyleads()">BuyLeads</a>
+    <a (click)="products()">Products</a>
+    <a>Hi seller</a>
+  </div>
+</nav>
+
+
+<!-- <nav class="navbar navbar-expand-lg bg-body-tertiary custom-navbar">
+    <div class="container-fluid">
+      <img src="bgremovelogo.png">
+      
+         <div class="searchbox">
+         
+          <div class="dropdown" >
+            <button  class="btn btn-secondary dropdown-toggle" 
+            type="button" id="dropdownMenuButton">
+      All India
+    </button>
+    
+    
+    <div  class="dropdown-menu p-3" aria-labelledby="dropdownMenuButton">
+     
+      <form   placeholder="Enter text here">
+            </form>
+           
+    </div>
+          </div>
+        
+          <div class="textbtn">
+            <input #searchbtn type="text" placeholder="enter product/service to search"/>
+          </div>
+  
+          <div class="searchbtn1">
+            <i class="bi bi-search" ></i>
+          </div>
+          
+         </div>
+  
+         <div class="getBestPrice">
+          <button id="getBestPrice1">Buy with IndiaMART</button>
+         </div>
+         
+         <div class="rightthings">
+          <button id="selllertool" >Lead Manager</button>
+          <button id="selllertool">Buy Leads</button>
+          <button id="selllertool">Shopping</button>
+          <!-- copied from without reg -->
+          <!-- <div class="btn-group">
+            <div class="user" >
+              <img src="user.png" style="height: 25px; width: 25px;">
+              <div style="flex-direction: row; display: flex;">
+                <p style="color: white; font-size: 13px; font-family: Arial, Helvetica, sans-serif;">Hi Seller</p>
+                <span class="dropdown-icon" >
+                  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="white">
+                    <path d="M7 10l5 5 5-5H7z"/>
+                  </svg>
+                </span>
+              </div>
+            </div>
+            
+          </div>
+        -->
+        
+      
+
+
+<div class="container-fluid">
+    <div class="row ">
+        <div class="col-3 ">
+            <img src="imbaner-opt.png">
+        </div>
+
+        <div class="col-6">
+            <div class="row d-inline"><span style="font-weight: bolder; ">Sell for free</span>on India’s largest online B2B <br> marketplace</div>
+            <div class="row">
+                <div class="col-4"><img class="homeico" src="img3.png"> <br> <span style="font-weight: bolder;">18 crores+</span>  <br><span style="font-size: 17px; margin-left: 25px;">Buyers</span></div>
+                <div class="col-4"><img class="homeico" src="img1.png"> <br> <span style="font-weight: bolder;  ">75 lakh+</span>  <br> <span style="font-size: 17px;margin-left: 5px;">Suppliers</span> </div>
+                <div class="col-4"><img class="homeico" src="img2.png"> <br> <span style="font-weight: bolder; ">10 crore+</span>  <br> <span style="font-size: 17px; margin-right: 12px;">Products & Services</span> </div>
+            </div>
+        </div>
+
+        <div class="col-3" id="register">
+            <p style="font-size: 23px; font-family: Arial, Helvetica, sans-serif; font-weight: bolder;white-space: nowrap">Free Registration/Sign In</p>
+            <input type="text" placeholder="Enter 10 digit mobile number" [(ngModel)]="mobileNumber"><br>
+            <button id="startselling" (click)="onStartSelling()"> Start Selling </button>
+        </div>
+
+        <div class="modal fade" [class.show]="showOTPModal" [style.display]="showOTPModal ? 'block' : 'none'" id="otpModal" tabindex="-1" aria-labelledby="otpModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+              <div class="modal-content">
+                  <div class="modal-header">
+                      <h5 class="modal-title" id="otpModalLabel">Verify OTP</h5>
+                      <button type="button" class="btn-close" (click)="closeOTPModal()" aria-label="Close"></button>
+                  </div>
+                  <div class="modal-body">
+                      <form (ngSubmit)="verifyOTP()">
+                          <div class="mb-3">
+                              <label for="otp" class="form-label">Enter OTP</label>
+                              <div class="input-group">
+                                  <input type="text" class="form-control" id="otp" placeholder="Enter Your OTP" [(ngModel)]="otp" name="otp" required>
+                              </div>
+                          </div>
+                          <button type="submit" class="btn btn-success w-100">Submit</button>
+                      </form>
+                  </div>
+              </div>
+          </div>
+        </div>
+        
+    </div>
+
+    <div class="row">
+
+        <div class="d-inline-flex"><p class="singleline" >Sell on tradeMSME</p>  <p class="singleline" id="mx">Get a free listing in 3 simple steps:</p></div>
+        <div class="col-4" id="leftcontainer">
+            
+            <div class="row-gap-md-1 d-flex ">
+                <img id="img"src="img3.png">
+                <p>Grow your Business
+                    <br>Sell to buyers anytime, anywhere</p>
+            </div>
+
+            <div class="row-gap-md-1 d-flex">
+                <img id="img"src="img1.png">
+                <p>Zero Cost
+                   <br> No commission or transaction fee</p>
+            </div>
+
+            <div class="row-gap-md-1 d-flex">
+                <img id="img"src="img2.png">
+                <p>Manage your Business Better
+                   <br> Lead Management System & other features</p>
+            </div>
+
+
+        </div>
+
+       
+        <div class="col-8">
+            
+            <div class="row" id="rightcorner">
+                <div class="col-4">
+                    <img class="icon" src="icon1.jpg">
+                    Create Account
+                    Add your name and phone number to get started</div>
+                <div class="col-4">
+                    <img class="icon" src="icon2.jpg">
+                    Add Business
+                    Add name, address & e-mail of your company, store/ business.</div>
+                <div class="col-4">
+                    <img  class="icon" src="icon3.jpg">
+                    Add Products/ Services
+                    Minimum 3 products/ services needed for your free listing page.</div>
+            </div>
+        </div>
+    </div> 
+</div>

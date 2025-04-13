@@ -1,0 +1,401 @@
+.col-7{
+    margin-left: 50px;
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+    color: #2aa699;
+    background-color: #ffffff;
+}
+.container{
+  min-height: calc(100vh - 100px); /* Adjust based on footer height */
+  padding-bottom: 100px;
+}
+.step {
+    text-align: center;
+    display: inline-block;
+    padding-top: 10px;
+   
+}
+
+
+.bottombordersuccess{
+    border-bottom: 2px solid #2aa699;
+}
+
+.bottombordercurrent{
+    border-bottom: 2px solid #2e3192;
+}
+
+.step img {
+    display: block;
+    margin: 0 auto;
+    margin-bottom: 7px;
+}
+
+.step p {
+    margin: 0;
+}
+
+
+.form-floating{
+    font-size: 10px;
+}
+.global{
+    font-size: 13px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+.navlogo{
+    width: 4cm;
+    height: 1.5cm;
+   
+}
+.rightthings{
+    display: inline;
+  }
+  nav{
+    background-color: #2E3192;
+}
+
+.nav-item img {
+    margin-bottom: none;
+}
+.navbar-nav .nav-item {
+    margin-right: 0px;
+}
+.navbar-nav .nav-item:last-child {
+    margin-right: 0;
+}
+.navbar {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+ 
+  .navbar-brand img {
+    height: 40px; /* Adjust the height as needed */
+    width: auto;
+  }
+  .nav-item img {
+    height: 25px; /* Adjust the height as needed */
+    width: auto;
+  }
+  .navbar {
+    padding-top: 0;
+    padding-bottom: 0;
+  }
+  .nav-link {
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .nav-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  #continue{
+    background-color: #00a699;
+    border: none;
+    color: white;
+    margin: 0px 20px 0px 0px;
+    height: 40px;
+    width: 133px;
+  }
+
+  
+.addphoto{
+    
+  width: 145px;
+  height: 150px;
+  border: 1px solid black;
+}
+
+  .photo-box {
+ 
+    /* Adjust to your desired height */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    cursor: pointer;
+    position: relative;
+   
+  }
+  
+  .photo-preview {
+    object-position: center;
+    object-fit: contain;
+    width:  100%;
+    height: 100%;;
+  }
+   .photo-box::before {
+    content: "";
+    display: block;
+    padding-top: 100%; 
+  }
+  
+  .photo-box img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }  
+  
+  .image-upload-box {
+    width: 200px; /* Set a width */
+    height: 200px; /* Set a height */
+    border: 2px dashed #ccc; /* Dashed border for the upload area */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    background-color: #f9f9f9; /* Light background */
+  }
+  
+  .uploaded-image {
+    width: 100%; /* Make the image fill the box */
+    height: 100%; /* Maintain aspect ratio */
+    object-fit: cover; /* Crop the image to fit */
+  }
+  
+   .profile-box {
+        background-color: #fff;           /* White card background */
+        border: 1px solid #ddd;           /* Light border */
+        border-radius: 6px;               /* Rounded corners */
+        box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow */
+        padding: 16px;                    /* Inner spacing */
+        font-family: 'Segoe UI', Tahoma, sans-serif; /* Example IndiaMART-like font */
+        color: #333;
+        max-width: 400px;                 /* Limit the box width, or let Bootstrap's col-md-5 handle it */
+        margin: 0 auto;                   /* Center horizontally if needed */
+      }
+      
+      /* Title text styling */
+      .profile-title {
+       
+        color: #075E54;    /* WhatsApp-like green, or your brand color */
+        margin-bottom: 8px;
+        margin: 0;              /* Remove default margin */
+        font-size: 1.2rem;      /* Adjust font size as needed */
+        font-weight: bold;
+       
+      }
+      
+      /* General info text */
+      .profile-info {
+        font-size: 0.95rem;
+        color: #555;
+        margin: 0;
+        margin-top: 20px;         /* Let the parent container’s padding handle spacing */
+      }
+      
+      .profile-header {
+        display: flex;
+        align-items: center;    /* Vertically center the image and text */
+        gap: 10px;              /* Space between the image and text */
+      }
+      
+      /* Image styling */
+      .profile-header img {
+        max-height: 40px;       /* Adjust height as needed */
+        width: auto;
+        object-fit: contain;
+      }
+      
+      .profile-info ul {
+        margin: 0;
+        padding-left: 20px; /* Indent the bullet list */
+        list-style: disc;  /* Use disc as the bullet style */
+      }
+      
+      .profile-info li {
+        font-size: 1rem;
+        color: #555;
+      }
+
+      .photo-container {
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .upload-options {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-top: 10px;
+      }
+      
+      .video-btn, .pdf-btn {
+        width: 48%;
+        padding: 8px;
+        border: 1px solid #ccc;
+        background-color: #f1f1f1;
+        cursor: pointer;
+        border-radius: 5px;
+        text-align: center;
+      }
+      
+      .video-btn:hover, .pdf-btn:hover {
+        background-color: #e0e0e0;
+      }
+
+      .photo-box {
+        border: 1px solid black;
+        padding: 20px;
+        border-radius: 5px;
+        background: #f8f8f8;
+        margin-bottom: 5px;
+      }
+      
+      /* Two Icon Boxes */
+     
+      /* Parent container for centering */
+.icon-boxes {
+  display: flex;
+  gap: 5px; /* Adds spacing between icons */
+  margin-top: 20px;
+}
+
+/* Icon boxes */
+.icon-box {
+  width: 100px; /* Increased width */
+  height: 75px; /* Increased height */
+  /* border: 1px solid black; */
+  /* background: #f8f8f8; */
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  position: relative; /* Ensures icon stays inside */
+  overflow: hidden; 
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+
+}
+
+/* Make icons larger */
+.icon-box i {
+  font-size: 40px; /* Increased icon size */
+  color: #d9534f; /* Red for YouTube */
+  margin: 2px;
+}
+
+.icon-box p {
+  font-size: 8px;
+  margin: 0;
+}
+/* Change PDF icon color */
+.icon-box:nth-child(2) i {
+  color: #007bff; /* Blue for PDF */
+}
+
+/* Hover effects */
+.icon-box:hover {
+  background: #ececec;
+  transform: scale(1.05);
+}
+label {
+  font-weight: bold;
+  margin-top: 10px;
+  display: block;
+}
+
+.form-control {
+  width: 100%;
+  padding: 8px;
+  margin-top: 5px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.price-container {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.price-box, .unit-box {
+  flex: 1;
+}
+
+.input-group {
+  display: flex;
+  align-items: center;
+}
+
+
+
+.char-limit {
+  color: gray;
+  font-size: 12px;
+  margin-top: 5px;
+}
+
+.dropdown-menu{
+
+  width: auto !important; /* Adjust width dynamically */
+  min-width: 150px; /* Set a reasonable minimum width */
+  max-width: 350px; /* Prevent it from being too wide */
+  overflow: hidden;
+  white-space: nowrap; 
+ 
+ 
+
+  max-height: 200px;  /* Adjust the height as needed */
+  overflow-y: auto;  /* Enables vertical scrolling */
+  
+}
+
+.price-unit-container {
+    display: flex;
+    align-items: center;
+    gap: 20px;  /* Adds space between price and unit */
+}
+
+.price-unit-container input {
+  width: 120px; /* Smaller input box */
+}
+
+.unit-btn {
+  width: 150px; /* Keep width smaller */
+  height: 38px; /* Align height with input */
+}
+
+.input-group-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-right: none;
+  padding: 6px 10px;
+}
+
+#price {
+  height: 38px;
+  border-left: none;
+}
+
+.shipping-label,
+.tax-label {
+    margin-right: 5px; /* Reduces gap between label and radio button */
+    font-weight: bold; /* Keeps the labels prominent */
+}
+
+input[type="radio"] {
+    margin-left: 3px;
+    margin-right: 3px;
+    vertical-align: middle;
+}
+
+.product-description {
+  width: 100%;
+  min-height: 120px; /* Increase height */
+  resize: vertical; /* Allow resizing */
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}

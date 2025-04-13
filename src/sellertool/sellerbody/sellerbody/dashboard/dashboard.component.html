@@ -1,0 +1,17 @@
+<div class="container mt-4">
+    <div class="card welcome-card shadow-lg">
+      <div class="card-body text-center">
+        <h2 class="fw-bold">
+          <i class="bi bi-person-circle me-2 text-white"></i> 
+          Welcome, <span class="text-white">{{ sellerData.name || 'Seller' }}!</span>
+        </h2>
+        <p class="fs-5 text-white opacity-75">
+          Manage your business efficiently with your personalized dashboard.
+        </p>
+        <button (click)="gotoprod()"  class="btn btn-light btn-lg fw-bold">
+          <i class="bi bi-box-seam me-2"></i> View Your Products
+        </button>
+      </div>
+    </div>
+  </div>
+  

@@ -1,0 +1,32 @@
+<app-navbar></app-navbar>
+<div class="layout-container">
+<div class="sidebar">
+  <ul>
+    <li routerLink="/app-sellerbody/dashboard" routerLinkActive="active">
+      <i class="fa fa-home"></i>
+      <span>Dashboard</span>
+    </li>
+    <li routerLink="/app-sellerbody/profile" routerLinkActive="active">
+      <i class="fa fa-user"></i>
+      <span>Profile</span>
+    </li>
+    <li routerLink="/app-sellerbody/leadmanager" routerLinkActive="active">
+      <i class="fa fa-comments"></i>
+      <span>Lead Manager</span>
+    </li>
+    <li routerLink="/app-sellerbody/buyleads" routerLinkActive="active">
+      <i class="fa fa-line-chart"></i>
+      <span>BuyLeads</span>
+    </li>
+    <li routerLink="/app-sellerbody/products" routerLinkActive="active">
+      <i class="fa fa-shopping-cart"></i>
+      <span>Products</span>
+    </li>
+   
+  </ul>
+</div>
+
+<div class="content">
+  <router-outlet></router-outlet>
+</div>
+</div>

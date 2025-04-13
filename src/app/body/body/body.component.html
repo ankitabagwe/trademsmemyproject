@@ -1,0 +1,419 @@
+<!-- <div class="banner">
+    
+    <div class="leftdiv">
+        <h1 id="leftdiv1">Tell us what you Need</h1>
+        <input id="leftdiv2" type="text" placeholder="Enter product/Service name">
+        <button id="leftdiv3">Submit Requirement</button>
+    </div>
+
+    <div class="rightdiv">
+        <h1 id="rightdiv1">Strengthen Your Profile</h1>
+        <img src="spiral-border1.png" id="rightdiv2">
+        <h2 id="rightdiv3">Welcome</h2>
+        <h3 id="rightdiv4">Continue to update your buisness profile</h3>
+        <input type="text" id="rightdiv5">
+        <button id="rightdiv6">update</button>
+        <div class="verification">
+            <div id="div1">
+                <img>
+
+            </div>
+        </div>
+    </div>
+</div> -->
+
+<nav style="background-color: #EAD196" class="navbar navbar-expand-lg bg-body-tertiary custom-navbar">
+  <div class="container-fluid">
+    <div class="logo">
+      <img src="bgremovelogo.png" alt="Logo" />
+    </div>
+    
+       <div class="searchbox" >
+       
+        <div class="dropdown" >
+          <button  class="btn" 
+          type="button" id="dropdownMenuButton">
+    All India
+  </button>
+  
+  
+  <!-- <div *ngIf="showTextbox" class="dropdown-menu p-3" aria-labelledby="dropdownMenuButton">
+   
+    <form [formGroup] = "frm" (ngSubmit) = "onPost()" placeholder="Enter text here">
+     
+      <ng-select class="w-20" formControlName="cities">
+          <ng-option *ngFor="let city of cities" [value]="city">{{city}}</ng-option>
+      </ng-select>
+      
+      
+          </form>
+          <div *ngIf="isSubmitted" class="message">
+              {{frm.value | json}}
+          </div>
+  </div> -->
+        </div>
+      
+        <div class="textbtn">
+          <input #searchbtn type="text" placeholder="enter product/service to search"/>
+        </div>
+
+        <div style="background-color: #009688;" class="searchbtn1">
+          <i class="bi bi-search" (click)="searchProducts(searchbtn.value)"></i>
+        </div>
+        
+       </div>
+
+       
+       
+       <div class="rightthings">
+        <button id="selllertool" (click)="gotoseller()">Seller Tools</button>
+        <button id="selllertool"  (click)="onGetPrice()">Messages</button>
+        <button id="selllertool"  (click)="onGetPrice()">Sign In</button>
+        <!-- copied from without reg -->
+        <!-- <div class="btn-group">
+           User button 
+          <div class="user" (click)=" toggle()">
+            <img src="user.png" style="height: 25px; width: 25px;">
+            <div style="flex-direction: row; display: flex;">
+              <p style="color: white; font-size: 13px; font-family: Arial, Helvetica, sans-serif;">Hi {{ buyerName }}</p>
+              <span class="dropdown-icon">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="24" height="24" fill="white">
+                  <path d="M7 10l5 5 5-5H7z" />
+                </svg>
+              </span>
+            </div>
+          </div>
+        
+        
+        </div> -->
+      
+       </div>
+      </div>
+    </nav>  
+
+
+<div class="outer container-fluid" style="background-color: #f3f3f3;" (click)="hideToggle($event)" >
+  <div class="inner container m-3" style="background-color: white;">
+    <div class="row"></div>
+      <div class="col-md-5 offset-md-2">
+          <p style="font-weight: bold;">Products You May Like <a href="#">View All ></a></p>
+      </div>
+
+      <div class="row">
+
+        <div class="col-md-2 m-md-3" *ngFor="let product of products | slice:0:1">
+        <div class="card">
+          <div class="d-flex justify-content-center mt-1">
+            <img class="card-img-top image" [src]="product.file" alt="{{ product.productName }}">
+          </div>
+          <div class="card-body">
+            <p class="card-title">{{ product.productname }}</p>
+            <div class="location">
+              <p>{{ product.city }},</p>
+              <p>{{ product.state }}</p>
+            </div>
+            <p class="card-text">Rs {{ product.price }}</p>
+            <p class="text-muted">{{ product.companydetails }}</p>
+            <button class="get-price-btn" (click)="onGetPrice($event)">Get Best Price</button>
+          </div>
+        </div>
+        </div>
+        
+
+        <div class="col-md-2 m-md-3" *ngFor="let product of products | slice:1:2">
+          <div class="card">
+            <div class="d-flex justify-content-center mt-1">
+              <img class="card-img-top image" [src]="product.file" alt="{{ product.productName }}">
+            </div>
+            <div class="card-body">
+              <p class="card-title">{{ product.productname }}</p>
+              <div class="location">
+                <p>{{ product.city }},</p>
+                <p>{{ product.state }}</p>
+              </div>
+              <p class="card-text">Rs {{ product.price }}</p>
+              <p class="text-muted">{{ product.companydetails }}</p>
+              <button class="get-price-btn" (click)="onGetPrice($event)">Get Best Price</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-2 m-md-3" *ngFor="let product of products | slice:2:3">
+          <div class="card">
+            <div class="d-flex justify-content-center mt-1">
+              <img class="card-img-top image" [src]="product.file" alt="{{ product.productName }}">
+            </div>
+            <div class="card-body">
+              <p class="card-title">{{ product.productname }}</p>
+              <div class="location">
+                <p>{{ product.city }},</p>
+                <p>{{ product.state }}</p>
+              </div>
+              <p class="card-text">Rs {{ product.price }}</p>
+              <p class="text-muted">{{ product.companydetails }}</p>
+              <button class="get-price-btn" (click)="onGetPrice($event)">Get Best Price</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-2 m-md-3" *ngFor="let product of products | slice:3:4">
+          <div class="card">
+            <div class="d-flex justify-content-center mt-1">
+              <img class="card-img-top image" [src]="product.file" alt="{{ product.productName }}">
+            </div>
+            <div class="card-body">
+              <p class="card-title">{{ product.productname }}</p>
+              <div class="location">
+                <p>{{ product.city }},</p>
+                <p>{{ product.state }}</p>
+              </div>
+              <p class="card-text">Rs {{ product.price }}</p>
+              <p class="text-muted">{{ product.companydetails }}</p>
+              <button class="get-price-btn" (click)="onGetPrice($event)">Get Best Price</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-2 m-md-3" *ngFor="let product of products  | slice:4:5">
+          <div class="card">
+            <div class="d-flex justify-content-center mt-1">
+              <img class="card-img-top image" [src]="product.file" alt="{{ product.productName }}">
+            </div>
+            <div class="card-body">
+              <p class="card-title">{{ product.productname }}</p>
+              <div class="location">
+                <p>{{ product.city }},</p>
+                <p>{{ product.state }}</p>
+              </div>
+              <p class="card-text">Rs {{ product.price }}</p>
+              <p class="text-muted">{{ product.companydetails }}</p>
+              <button class="get-price-btn" (click)="onGetPrice($event)">Get Best Price</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <!-- <div class="modal fade show" [class.show]="showOtpModal" id="signInModal" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title">Sign In</h5>
+              <button type="button" class="btn-close" (click)="closeModal()" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              Mobile Number Input 
+              <form *ngIf="!showOtpModal" (ngSubmit)="sendOTP()">
+                <div class="mb-3">
+                  <label class="form-label">Mobile Number</label>
+                  <div class="input-group">
+                    <span class="input-group-text">+91</span>
+                    <input type="text" class="form-control" placeholder="Enter Your Mobile Number" [(ngModel)]="mobileNumber" name="mobileNumber" required>
+                  </div>
+                </div>
+                <button type="submit" class="btn btn-success w-100">Submit</button>
+              </form>   
+            </div>
+          </div>
+        </div>
+      </div> -->
+
+   <!-- Mobile Number Modal -->
+<div class="modal fade" [class.show]="showSignInModal" [style.display]="showSignInModal ? 'block' : 'none'" id="signInModal" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered" (click)="$event.stopPropagation()">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="signInModalLabel">Sign In</h5>
+              <button type="button" class="btn-close" (click)="closeSignInModal()" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <form (ngSubmit)="login(mobileNumber)">
+                  <div class="mb-3">
+                      <label for="phoneNumber" class="form-label">Mobile Number</label>
+                      <div class="input-group">
+                          <span class="input-group-text">+91</span>
+                          <input type="text" class="form-control" id="mobileNumber" placeholder="Enter Your Mobile Number" [(ngModel)]="mobileNumber" name="mobileNumber" required>
+                      </div>
+                  </div>
+                  <button type="submit" class="btn btn-success w-100">Submit</button>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>
+
+<!-- OTP Verification Modal -->
+<div class="modal fade" [class.show]="showOTPModal" [style.display]="showOTPModal ? 'block' : 'none'" id="otpModal" tabindex="-1" aria-labelledby="otpModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+      <div class="modal-content">
+          <div class="modal-header">
+              <h5 class="modal-title" id="otpModalLabel">Verify OTP</h5>
+              <button type="button" class="btn-close" (click)="closeOTPModal()" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+              <form (ngSubmit)="verifyOTP()">
+                  <div class="mb-3">
+                      <label for="otp" class="form-label">Enter OTP</label>
+                      <div class="input-group">
+                          <input type="text" class="form-control" id="otp" placeholder="Enter Your OTP" [(ngModel)]="otp" name="otp" required>
+                      </div>
+                  </div>
+                  <button type="submit" class="btn btn-success w-100">Submit</button>
+              </form>
+          </div>
+      </div>
+  </div>
+</div>
+
+
+
+      <!-- <div class="modal fade"  [class.show]="showModal" id="signInModal" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true"> 
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="signInModalLabel">Sign In</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form (ngSubmit)="sendOTP()">
+                <div class="mb-3">
+                  <label for="phoneNumber" class="form-label">Mobile Number</label>
+                  <div class="input-group">
+                    
+                    <span class="input-group-text">+91</span>
+                    <input type="text" class="form-control" id="mobileNumber" placeholder="Enter Your Mobile Number" [(ngModel)]="mobileNumber" name="mobileNumber" required>
+                  </div>
+                 
+                </div>
+                <button  type="submit" class="btn btn-success w-100">Submit</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>  -->
+
+<!-- 
+      <div class="modal fade"  [class.show]="showModal" id="signInModal" tabindex="-1" aria-labelledby="signInModalLabel" aria-hidden="true"> 
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="signInModalLabel">Sign In</h5>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+              <form (ngSubmit)="verifyOTP()">
+                <div class="mb-3">
+                  <label for="phoneNumber" class="form-label">Enter OTP</label>
+                  <div class="input-group">
+                   
+                    <input type="text" class="form-control" id="mobileNumber" placeholder="Enter Your OTP" [(ngModel)]="otp" name="otp" required>
+                  </div>
+                 
+                </div>
+                <button  type="submit" class="btn btn-success w-100">Verify OTP</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>  -->
+
+
+
+       <!-- <div class="modal" [class.show]="showModal">
+        <div class="modal-content">
+          <h2>Login</h2>
+          <p>Enter your mobile number to proceed.</p>
+          <form (ngSubmit)="submitContactForm()">
+            <label for="mobile">Mobile Number</label>
+            <input
+              type="tel"
+              id="mobile"
+              name="mobile"
+              [(ngModel)]="mobileNumber"
+              required
+            />
+            <div class="modal-actions">
+              <button type="button" (click)="closeModal()">Cancel</button>
+              <button type="submit" (click)="login(mobileNumber)">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div> 
+
+      <div class="modal-backdrop" [class.show]="showModal" (click)="closeModal()"></div>
+
+  </div> -->
+
+   <div class="inner container m-3" style="background-color: white;">
+    <div class="row"></div>
+      <div class="col-md-5 offset-md-2">
+          <p style="font-weight: bold;">Categories You May Like <a href="#">View All ></a></p>
+      </div>
+
+      <div class="row">
+        <div class="col-md-2 m-md-3">
+          <div class="card" style="width: 15rem; height: 20rem;">
+            <div class="d-flex justify-content-center mt-1">
+              <img class="card-img-top image" src="indiamart_images_for_postman/genericmedicines.png"  alt="">
+            </div>
+            <div class="card-body text-center">
+              <p class="card-title">Generic Medicines</p>
+              <button style="background-color: #2e3192; color: white; font-weight: bold;">Get Quotes</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-2 m-md-3">
+          <div class="card" style="width: 15rem; height: 20rem;">
+            <div class="d-flex justify-content-center mt-1">
+              <img class="card-img-top image" src="indiamart_images_for_postman/surgical-gloves.png"  alt="">
+            </div>
+            <div class="card-body text-center">
+              <p class="card-title">Surgical Gloves</p>
+              <button style="background-color: #2e3192; color: white; font-weight: bold;">Get Quotes</button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-2 m-md-3">
+          <div class="card" style="width: 15rem; height: 20rem;">
+            <div class="d-flex justify-content-center mt-1">
+              <img class="card-img-top image" src="indiamart_images_for_postman/decorative-wall-panel.png"  alt="">
+            </div>
+            <div class="card-body text-center">
+              <p class="card-title">Decorative Wall Panel</p>
+              <button style="background-color: #2e3192; color: white; font-weight: bold;">Get Quotes</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-2 m-md-3">
+          <div class="card" style="width: 15rem; height: 20rem;">
+            <div class="d-flex justify-content-center mt-1">
+              <img class="card-img-top image" src="indiamart_images_for_postman/basmati-rice.png"  alt="">
+            </div>
+            <div class="card-body text-center">
+              <p class="card-title">Basmati Rice</p>
+              <button style="background-color: #2e3192; color: white; font-weight: bold;">Get Quotes</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-2 m-md-3">
+          <div class="card" style="width: 15rem; height: 20rem;">
+            <div class="d-flex justify-content-center mt-1">
+              <img class="card-img-top image" src="indiamart_images_for_postman/flex-printing-machine.png"  alt="">
+            </div>
+            <div class="card-body text-center">
+              <p class="card-title">Flex Printing Machine</p>
+              <button style="background-color: #2e3192; color: white; font-weight: bold;">Get Quotes</button>
+            </div>
+          </div>
+        </div>
+
+       
+          
+      </div>
+  </div> 
+</div>

@@ -1,0 +1,127 @@
+<div class="outercontainer-fluid">
+    <h1 style="color: red; font-size: medium; font-family: Arial, Helvetica, sans-serif; font-weight: bold;">You have not registered with trademsme. Kindly complete the registartion.</h1>
+  <h1>Manage Profile</h1>
+  <div class="inner container m-md-4" style="background-color: #e8eaeb;">
+      <form [formGroup]="profileForm" (ngSubmit)="onSubmit()" class="mx-md-4">
+          <!-- Personal Information Section -->
+          <div class="container mt-5">
+              <div class="card">
+                  <div class="card-body">
+                      <h5 class="card-title">Personal Information</h5>
+
+                      <!-- Name -->
+                      <div class="mb-3 d-flex">
+                          <label for="name" class="form-label mx-md-5">Name<span class="text-danger">*</span></label>
+                          <input type="text" class="form-control" formControlName="name" id="name" placeholder="Enter your Name" required>
+                      </div>
+
+                      <!-- Mobile Number -->
+                      <div class="mb-3 d-flex">
+                          <label for="mobileNumber" class="form-label mx-md-5">Mobile Number<span class="text-danger">*</span></label>
+                          <span class="input-group-text">+91</span>
+                          <input type="text" class="form-control" formControlName="mobilenumber" id="mobileNumber" placeholder="Enter your mobile number" required>
+                      </div>
+
+                      <!-- Email -->
+                      <div class="mb-3 d-flex">
+                          <label for="email" class="form-label mx-md-5">Email ID<span class="text-danger">*</span></label>
+                          <input type="email" class="form-control" formControlName="email" id="email" placeholder="Enter your email ID" required>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Address Information Section -->
+          <div class="container mt-5">
+              <div class="card">
+                  <div class="card-body">
+                      <h5 class="card-title">Address Information</h5>
+
+                      <!-- PIN Code -->
+                      <div class="mb-3 d-flex">
+                          <label for="PINCode" class="form-label mx-md-5">PIN Code<span class="text-danger">*</span></label>
+                          <input type="text" class="form-control" formControlName="pincode" id="PINCode" placeholder="PIN Code" required>
+                      </div>
+
+                      <!-- City -->
+                      <div class="mb-3 d-flex">
+                          <label for="City" class="form-label mx-md-5">City<span class="text-danger">*</span></label>
+                          <input type="text" class="form-control" formControlName="city" id="City" placeholder="City" required>
+                      </div>
+
+                      <!-- Country -->
+                      <div class="mb-3 d-flex">
+                          <label for="Country" class="form-label mx-md-5">Country<span class="text-danger">*</span></label>
+                          <input type="text" class="form-control" value="India" disabled>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Company Information Section -->
+          <div class="container mt-5">
+              <div class="card">
+                  <div class="card-body">
+                      <h5 class="card-title">Company Information</h5>
+
+                      <!-- Company Name -->
+                      <div class="mb-3 d-flex">
+                          <label for="CompanyName" class="form-label mx-md-5">Company Name<span class="text-danger">*</span></label>
+                          <input type="text" class="form-control" formControlName="companyname" id="Companyname" placeholder="Company Name" required>
+                      </div>
+
+                      <!-- GSTIN -->
+                      <div class="mb-3 d-flex">
+                          <label for="GSTIN" class="form-label mx-md-5">GSTIN<span class="text-danger">*</span></label>
+                          <input type="text" class="form-control" formControlName="gstin" id="GSTIN" placeholder="GSTIN" required>
+                      </div>
+
+                      <!-- PAN -->
+                      <div class="mb-3 d-flex">
+                          <label for="PAN" class="form-label mx-md-5">PAN<span class="text-danger">*</span></label>
+                          <input type="text" class="form-control" formControlName="pan" id="PAN" placeholder="PAN" required>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <!-- Bank Details Section -->
+          <div class="container mt-5">
+              <div class="card">
+                  <div class="card-body">
+                      <h5 class="card-title">Bank Account Details</h5>
+
+                      <!-- IFSC Code -->
+                      <div class="mb-3 d-flex">
+                          <label for="IFSCCode" class="form-label mx-md-5">IFSC Code<span class="text-danger">*</span></label>
+                          <input type="text" class="form-control" formControlName="ifsccode" id="IFSCCode" placeholder="IFSC Code" required>
+                      </div>
+
+                      <!-- Account Number -->
+                      <div class="mb-3 d-flex">
+                          <label for="AccountNumber" class="form-label mx-md-5">Account Number<span class="text-danger">*</span></label>
+                          <input type="text" class="form-control" formControlName="accountnumber" id="accountnumber" placeholder="Account Number" required>
+                      </div>
+
+                      <!-- Bank Name -->
+                      <div class="mb-3 d-flex">
+                          <label for="BankName" class="form-label mx-md-5">Bank Name<span class="text-danger">*</span></label>
+                          <input type="text" class="form-control" formControlName="bankname" id="bankname" placeholder="Bank Name" required>
+                      </div>
+
+                      <!-- Account Type -->
+                      <div class="mb-3 d-flex">
+                          <label for="accountType" class="form-label mx-md-5">Account Type</label>
+                          <select formControlName="accounttype" class="form-control" id="accountType">
+                              <option value="CurrentAccount">Current Account</option>
+                              <option value="SavingAccount">Saving Account</option>
+                          </select>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+          <button type="submit" class="btn btn-success w-10 align-items-end">Save</button>
+      </form>
+  </div>
+</div>

@@ -1,0 +1,531 @@
+.banner{
+  height: 338.45px;
+  width: 100%;
+  display: flex;
+}
+.banner::before {
+  background-size: contain;
+ overflow: hidden;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 400px;
+  width: 100%;
+  /* background-image: url("warehouse_banner.jpg"); */
+  background-size: cover;
+  filter: blur(3px); /* Adjust the blur radius as needed */
+  z-index: -1;
+  opacity: 0.9; 
+  background-color: rgba(0, 0, 0, 0.5); /* Ensure the blur layer is behind the content */
+}
+
+.leftdiv{
+  display: flex;
+  flex-direction: column;
+  border-radius: 5px;
+  height: 265px;
+  width: 473.27px;
+  background-color: #ebecf1;
+  margin: 0px 2px 2px 2px;
+  margin-right: 100px;
+  margin-left: 100px;
+  margin-top: 16px;
+}
+
+#leftdiv1{
+  color: #28417a;
+  font-size: 26px;
+  font-family: Arial;
+font-weight: 900;
+margin-left: 12px;
+padding: 10px 0px 0px;
+text-align: center;
+
+}
+
+#leftdiv2{
+  
+  margin-bottom: 20px;
+  margin-left: 15px;
+  margin-right: 15px;
+  
+}
+#leftdiv3{
+text-align: center;
+height: 45px;
+width: 245px;
+background-color: #00a699;
+color: white;
+margin-left: 95px;
+  margin-right: 35px;
+  border-radius: 1px;
+  border: none;
+  font-weight: bold;
+  border-radius: 5px;
+
+
+}
+
+
+.rightdiv{
+  height: 297.67px ;
+  width: 414.12px;
+  margin: 2px 0px 0px 10px;
+  padding: 10px 0px;
+  background-color:  #ebecf1;
+  margin-top: 16px;
+}
+
+#rightdiv1{
+  color: #28417a;
+  font-size: 26px;
+  font-family: Arial;
+font-weight: 900;
+margin-left: 12px;
+padding: 10px 0px 0px;
+text-align: center;
+}
+
+#rightdiv2{
+  height: 28px;
+  width: 336.48px;
+  margin-left: 35px;
+}
+
+#rightdiv3{
+  font-size: 16px;
+  font-family: Arial;
+  color: #6a6a6a;
+  text-align: center;
+}
+
+#rightdiv4{
+  font-size: 16px;
+  font-family: Arial;
+  color: #6a6a6a;
+  text-align: center;
+}
+
+.image{
+  height: 250px;
+  width: 220px;
+  justify-content: center;
+}
+
+
+.container-fluid{
+  background-color: #7D0A0A;;
+  padding: 0;
+  display: inline-block;
+  }
+  .navbar-brand{
+      color: white;
+      margin-right: 0;
+  }
+  
+  img{
+      width: 4cm;
+      height: 1.5cm;
+     
+  }
+  
+  .searchbox{
+      display: inline-flex;
+      margin-right: 10px;
+  }
+  .searchbtn1{
+      background-color: #009688; /* Teal background */
+    border-radius: 5px; /* Rounded corners */
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 35px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); 
+  }
+  
+  i {
+      width: 20px; /* Adjust icon size */
+      height: 20px;
+      justify-content: center;
+      filter: brightness(0) invert(1); /* Make icon white */
+    }
+  
+    #dropdownMenuButton{
+      color: black;
+      background-color: white;
+      font-size: small;
+      font-weight: bold;
+      height: 35px;
+      width: 120px;
+    }
+    
+    input{
+      width: 340px;
+      height: 35px;
+    }
+  
+  .getBestPrice{
+      display: inline;
+      margin-right: 90px;
+  }
+  #getBestPrice1{
+      color: black;
+      background-color: white;
+      font-size: small;
+      font-weight: bold;
+      height: 35px;
+      width: 120px;
+      border-width: 0px;
+      
+    }
+    .rightthings{
+      display: inline;
+    }
+
+
+    /* Modal container */
+    /* Modal backdrop (optional, for dim background) */
+
+  .btn-group:hover .dropdown-menu {
+    display: block;
+  }
+  .dropdown-menu {
+    display: block !important; /* Ensure it is visible */
+    visibility: visible !important;
+    opacity: 1 !important;
+    position: absolute; /* Or relative, depending on your layout */
+    top: 100%; /* Position it below the button */
+    left: 0; /* Align with the left edge of the button */
+    z-index: 100;/* Adjust position if necessary */
+  }
+
+  .image{
+    height: 250px;
+    width: 220px;
+    justify-content: center;
+  }
+
+ /* dropdown button*/
+ .btn-group {
+  position: relative; /* Make dropdown positioned relative to this */
+}
+
+.user {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  flex-direction: column;
+}
+
+.user div {
+  display: flex;
+  align-items: center;
+  flex-direction: row; display: flex;
+}
+
+.dropdown-menu {
+  display: none; /* Initially hide the dropdown */
+  position: absolute;
+  top: 100%; /* Position dropdown below the button group */
+  left: 0;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 10px;
+  z-index: 1000;
+}
+
+.dropdown-menu a {
+  display: block;
+  text-decoration: none;
+  color: black;
+  padding: 8px 12px;
+  font-size: 14px;
+}
+
+.dropdown-menu a:hover {
+  background-color: #f0f0f0; /* Highlight on hover */
+}
+
+.btn-group:hover .dropdown-menu {
+  display: block; /* Show the dropdown when hovering over btn-group */
+}
+
+#Quantity {
+  border: 2px solid #009688;; /* Green border, you can adjust the color */
+  border-radius: 50px; /* Fully rounded corners for capsule shape */
+  padding: 10px 20px; /* Padding for better size and feel */
+  font-size: 1rem; /* Set font size */
+  width: 100%; /* Make it responsive */
+  max-width: 250px; /* Limit the width */
+  outline: none; /* Remove the outline */
+  transition: border-color 0.3s ease-in-out; /* Smooth transition for border color */
+}
+
+#Quantity:focus {
+  border-color: #009688;; /* Darker green on focus */
+  box-shadow: 0 0 5px #009688(6, 128, 118, 0.5); /* Optional shadow for focus effect */
+}
+
+.dropdown-menu {
+  position: absolute;
+  background-color: white; /* Add if not present */
+  border: 1px solid #ccc;  /* Add if not present */
+  padding: 10px;           /* Add if needed */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional */
+  z-index: 1000;           /* Ensure it's above other elements */
+}
+
+.dropdown-menu{
+  overflow-y: auto;
+  display: none;
+  position: absolute;
+}
+
+.dropdown-menu.show {
+  display: block;
+}
+
+.dropdown-item {
+  cursor: pointer;
+}
+
+.custom-dropdown{
+  max-height: 200px; /* Set the fixed height */
+  overflow-y: auto; /* Enable vertical scrolling */
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+  border: 1px solid #ccc; /* Optional: Add border for better visibility */
+  padding: 0;
+   position: absolute; /* Position it directly below the button */
+  z-index: 1050; /* Ensure the dropdown appears above other elements */
+  margin-top: 5px; /* Add some space between the button and the dropdown */
+  background-color: #fff; /* Ensure the dropdown has a white background */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); 
+  right: 0;
+left: auto;
+
+}
+
+.custom-dropdown .dropdown-item:hover {
+  background-color: #f8f9fa; 
+}
+
+.custom-dropdown .dropdown-item {
+  padding: 8px 16px; 
+  cursor: pointer; 
+}
+
+.input-group.position-relative {
+  position: relative; 
+  width: 250px;
+  border-radius: 50px;
+
+}
+
+.icon-container {
+  display: flex;
+  gap: 10px;
+  margin-top: 5px;
+}
+
+.youtube-icon {
+  color: red;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.pdf-icon {
+  color: #d9534f;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.rightthings {
+  margin-left: 250px;
+  align-items: end; 
+    
+}
+
+.rightthings button {
+  background: white;
+  border: 1px solid #ccc;
+  padding: 8px 12px;
+  cursor: pointer;
+  border-radius: 3px;
+  font-weight: bold;
+  white-space: nowrap;
+  margin-left: auto;
+  margin-right: 6px;
+ 
+}
+
+.rightthings .btn-group {
+  display: flex;
+  margin-left: auto;
+}
+
+.navbar{
+  display: flex;
+}
+
+
+.card {
+  width: 15rem;
+  height: 25rem;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f1f1f1;
+}
+
+.card .image {
+  max-width: 100%;
+  height: 180px;
+  object-fit: contain;
+  padding: 5px;
+  background-color: white;
+}
+
+.card-body {
+  text-align: center;
+}
+
+.card-title {
+  font-size: 17px;
+  font-weight: bolder;
+  color: #2e358f;
+}
+
+.card-text {
+  font-size: 15px;
+  font-weight:bold ;
+  color: #212529;
+}
+
+.text-muted {
+  font-size: 14px;
+  color: #777;
+}
+
+.location {
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+  font-size: 14px;
+  color: #212529;
+}
+
+.get-price-btn {
+  background-color: #068076;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+}
+
+.col-md-4 {
+  background-color: #f9f9f9; /* Light background for contrast */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.col-md-4 img {
+  border-radius: 10px;
+  border: 2px solid #ddd;
+  padding: 5px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.col-md-4 img:hover {
+  transform: scale(1.05); /* Slight zoom effect on hover */
+  border-color: #068076;
+}
+
+.col-md-4 p {
+  font-size: 14px;
+  color: #333;
+  margin: 5px 0;
+}
+
+.icon-container {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  margin-top: 10px;
+}
+
+.youtube-icon {
+  color: #FF0000;
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.youtube-icon:hover {
+  transform: scale(1.2);
+}
+
+.pdf-icon {
+  color: #d9534f;
+  font-size: 24px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.pdf-icon:hover {
+  transform: scale(1.2);
+}
+
+.col-md-4 p:last-child {
+  font-weight: bold;
+  color: #068076;
+}
+
+.product-name {
+  font-size: 20px;
+  font-weight: bold;
+  color: #222;
+  text-transform: capitalize;
+}
+
+/* Style for price */
+.product-price {
+  font-size: 18px;
+  font-weight: bold;
+  color: #068076; /* Greenish-blue color for better visibility */
+}
+
+/* Style for shipping, tax, and sold by */
+.product-details {
+  font-size: 14px;
+  color: #555;
+  margin-top: 5px;
+}
+
+/* Distinct color and styling for Sold By */
+.seller-name {
+  font-size: 16px;
+  font-weight: bold;
+  color: #d9534f; /* Reddish color for attention */
+}
+
+/* Styling for Contact Number */
+.contact-number {
+  font-size: 16px;
+  font-weight: bold;
+  color: #007bff; /* Blue for a clickable look */
+  text-decoration: underline;
+  cursor: pointer;
+}
+

@@ -1,0 +1,256 @@
+/* ---------------------------
+   Global Base
+----------------------------- */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* ---------------------------
+   Navbar Header
+----------------------------- */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #7D0A0A;; /* IndiaMART deep blue */
+  padding: 10px 16px;
+  color: #fff;
+}
+
+/* Logo Section */
+.logo img {
+  height: 32px; /* Adjust if needed */
+  width: auto;
+  vertical-align: middle;
+}
+
+/* Search Container */
+.search-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #fff;
+  border-radius: 4px;
+  padding: 4px 8px;
+  flex: 1;
+  margin: 0 20px;
+}
+
+/* Dropdown inside search */
+.search-container select {
+  border: none;
+  outline: none;
+  background: transparent;
+  font-size: 0.9rem;
+  color: #333;
+  cursor: pointer;
+  min-width: 100px;
+}
+
+/* Text Input in search */
+.search-container input[type="text"] {
+  flex: 1;
+  border: none;
+  outline: none;
+  font-size: 0.9rem;
+  color: #333;
+}
+
+/* Search Button */
+.search-container .search-btn {
+  background-color: #009688; /* Teal accent */
+  border: none;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease;
+}
+
+.search-container .search-btn:hover {
+  background-color: #007e6b; /* Darker teal on hover */
+}
+
+.search-container .search-btn i {
+  margin-right: 4px;
+  font-size: 1rem;
+}
+
+/* ---------------------------
+   Right-side Actions
+----------------------------- */
+.actions {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* "Buy With IndiaMART" Button */
+.actions button {
+  background-color: #fff;
+  color: #1C4C90;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.actions button:hover {
+  background-color: #f0f0f0;
+}
+
+/* Notification Icon & Badge */
+.notifications {
+  position: relative;
+  font-size: 1.2rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+.notifications span {
+  position: absolute;
+  top: -8px;
+  right: -12px;
+  background-color: #ff5722;
+  color: #fff;
+  font-size: 0.7rem;
+  border-radius: 50%;
+  padding: 2px 6px;
+  min-width: 16px;
+  text-align: center;
+}
+
+/* Navbar Links */
+.actions a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 0.9rem;
+  transition: color 0.2s ease;
+}
+
+.actions a:hover {
+  color: #cde0ff;
+}
+
+/* ---------------------------
+   Additional Elements (optional)
+----------------------------- */
+
+/* Example for #register, #leftcontainer, etc. */
+/* Use these selectors only if they’re needed and do not conflict with the above header styles */
+/* Container for the registration/sign-in box */
+#register {
+  background-color: #f9f9f9;       /* Light background for contrast */
+  padding: 16px;                   /* Space inside the box */
+  border-radius: 6px;              /* Rounded corners */
+  max-width: 300px;                /* Limit width */
+  text-align: center;              /* Center align text & elements */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow */
+}
+
+/* Heading styling */
+#register p {
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  margin: 0 0 16px;                /* Space below heading */
+}
+
+/* Input field styling */
+#register input[type="text"] {
+  width: 100%;
+  padding: 8px 12px;
+  font-size: 14px;
+  border: 1px solid rgb(0, 166, 153);
+  border-radius: 4px;
+  box-sizing: border-box;          /* Ensures padding doesn’t break layout */
+  margin-bottom: 12px;             /* Space below input */
+}
+
+/* Button styling */
+#startselling {
+  background-color:rgb(0, 166, 153);       /* IndiaMART-like deep blue */
+  color: #fff;
+  border: 2px solid rgb(0, 166, 153);
+  padding: 8px 16px;
+  font-size: 14px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+#startselling:hover {
+  background-color: #fff;
+  color: rgb(0, 166, 153);
+}
+
+
+#leftcontainer {
+  background-color: #f5f4f4;
+}
+
+#img {
+  height: 49px;
+  width: 49px;
+}
+
+#mx {
+  margin-left: 250px;
+}
+
+#rightcorner {
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+.col-6 {
+  font-size: 20px;
+}
+
+.homeico {
+  height: 65px;
+  width: 65px;
+}
+
+.singleline {
+  font-size: 20px;
+}
+
+/* Adjust navigation item images if necessary */
+.navbar-nav .nav-item img {
+  height: 25px;
+  width: auto;
+  margin-bottom: 0;
+}
+
+.navbar-nav .nav-item {
+  margin-right: 0;
+}
+
+ul {
+  margin-right: 20px;
+}
+
+/* Input Group if used */
+.input-group {
+  width: 500px;
+  height: 35px;
+}
+
+/* Specific button styling */
+#btnbuy {
+  font: 11px Arial, Helvetica, sans-serif;
+  height: 35px;
+  width: 120px;
+  color: #2e3192;
+  background-color: white;
+}

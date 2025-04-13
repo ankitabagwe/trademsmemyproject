@@ -1,0 +1,50 @@
+<div class="chat-section">
+  <div class="chat-header">
+    <div class="user-info">
+      <div class="user-name">
+        <h4>{{ (buyerName || 'Unknown') | camelCaseToSpace }}</h4>
+       
+        <span class="contacted-tag">Contacted</span>
+      </div>
+
+      <div class="action-buttons">
+        <button class="icon-btn" title="Call">
+          <i class="bi bi-telephone-fill"></i>
+        </button>
+        <button class="icon-btn" title="Reminder">
+          <i class="bi bi-alarm-fill"></i>
+        </button>
+        <button class="icon-btn" title="Location">
+          <i class="bi bi-geo-alt"></i>
+        </button>
+       
+      </div>
+  </div>
+</div>
+    <div class="messages"  >
+      <p id="top">Contact added through enquiry received</p>
+      <div *ngFor="let message of messages"  [ngClass]="{'sent-message': message.senderId === sellerId,
+      'received-message': message.senderId !== sellerId}">
+        <p [innerHTML]="formatMessage(message.text)">{{ message.text }}</p>
+        <span>{{ message.timestamp | date: 'short' }}</span>
+      </div>
+    </div>
+  
+    
+      <div class="chat-input-container">
+        <!-- <i class="bi bi-paperclip icon" (click)="fileInput.click()"></i>
+          <input type="file" style="display: none;"  #fileInput (change)="onFileselected($event)"> -->
+        
+        <input type="text"  [(ngModel)]="newMessageText" placeholder="Type a message" />
+        
+        <div class="arrow-container">
+          <svg (click)="sendMessage()" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+         
+            <path d="M4 2L20 12L4 22L8 12L4 2Z" />
+          </svg>
+        </div>
+    
+      </div>
+   
+  
+  </div>

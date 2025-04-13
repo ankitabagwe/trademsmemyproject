@@ -1,0 +1,33 @@
+.welcome-card {
+    background: linear-gradient(135deg, #0044cc, #007bff); /* IndiaMART blue */
+    border-radius: 15px;
+    padding: 40px;
+    text-align: center;
+    color: white;
+    max-width: 900px;
+    margin: auto;
+  }
+  
+  .welcome-card h2 {
+    font-size: 32px;
+    font-weight: bold;
+  }
+  
+  .welcome-card p {
+    font-size: 20px;
+  }
+  
+  .welcome-card .btn {
+    background-color: #ff6600; /* IndiaMART orange */
+    color: white;
+    padding: 12px 24px;
+    font-size: 18px;
+    border-radius: 8px;
+  }
+  
+  .welcome-card .btn:hover {
+    background-color: #cc5200;
+    transform: scale(1.05);
+    transition: 0.3s;
+  }
+  

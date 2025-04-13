@@ -1,0 +1,313 @@
+<nav class="navbar navbar-expand-lg bg-body-tertiary custom-navbar">
+  <div class="container-fluid">
+    <img src="bgremovelogo.png" style="margin-right: 20px;">
+    
+       <div class="searchbox">
+       
+        <div class="dropdown" >
+          <button (click)="toggleDropdown()" class="btn" 
+          type="button" id="dropdownMenuButton">
+    All India
+  </button>
+  
+  
+  <!-- <div *ngIf="showTextbox" class="dropdown-menu p-3" aria-labelledby="dropdownMenuButton">
+   
+    <form [formGroup] = "frm" (ngSubmit) = "onPost()" placeholder="Enter text here">
+     
+      <ng-select class="w-20" formControlName="cities">
+          <ng-option *ngFor="let city of cities" [value]="city">{{city}}</ng-option>
+      </ng-select>
+      
+      
+          </form>
+          <div *ngIf="isSubmitted" class="message">
+              {{frm.value | json}}
+          </div>
+  </div> -->
+        </div>
+      
+        <div class="textbtn">
+          <input #searchbtn type="text" placeholder="enter product/service to search"/>
+        </div>
+
+        <div class="searchbtn1">
+          <i class="bi bi-search" (click)="searchProducts(searchbtn.value)"></i>
+        </div>
+        
+       </div>
+
+       
+       
+       <div class="rightthings">
+        <button id="selllertool" (click)="gotoseller()">Seller Tools</button>
+        <button id="selllertool" (click)="gotomessages()" >Messages</button>
+        <button id="selllertool" >Profile</button>
+        <button id="selllertool" (click)="logout()" >Logout</button>
+        <button id="selllertool" >Hi {{ buyerName }}</button>
+        <!-- copied from without reg -->
+        
+       </div>
+      </div>
+    </nav>  
+
+
+<div class="outer container-fluid" style="background-color: #f3f3f3;">
+  <div class="inner container m-3" style="background-color: white;">
+    <div class="row"></div>
+      <div class="col-md-5 offset-md-2">
+          <p style="font-weight: bold;">Products You May Like <a href="#">View All ></a></p>
+      </div>
+
+      <div class="row">
+
+        <div class="col-md-2 m-md-3" *ngFor="let product of products | slice:0:1">
+          <div class="card">
+            <div class="d-flex justify-content-center mt-1">
+              <img class="card-img-top image" [src]="product.file" alt="{{ product.productName }}">
+            </div>
+            <div class="card-body">
+              <p class="card-title">{{ product.productname }}</p>
+              <div class="location">
+                <p>{{ product.city }},</p>
+                <p>{{ product.state }}</p>
+              </div>
+              <p class="card-text">Rs {{ product.price }}</p>
+              <p class="text-muted">{{ product.companydetails }}</p>
+              <button style="background-color: #068076; color: white; font-weight: bold;"  (click)="onGetPrice(product)">Get Best Price</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-2 m-md-3" *ngFor="let product of products | slice:1:2">
+          <div class="card">
+            <div class="d-flex justify-content-center mt-1">
+              <img class="card-img-top image" [src]="product.file" alt="{{ product.productName }}">
+            </div>
+            <div class="card-body">
+              <p class="card-title">{{ product.productname }}</p>
+              <div class="location">
+                <p>{{ product.city }},</p>
+                <p>{{ product.state }}</p>
+              </div>
+              <p class="card-text">Rs {{ product.price }}</p>
+              <p class="text-muted">{{ product.companydetails }}</p>
+              <button style="background-color: #068076; color: white; font-weight: bold;"  (click)="onGetPrice(product)">Get Best Price</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-2 m-md-3" *ngFor="let product of products | slice:2:3">
+          <div class="card">
+            <div class="d-flex justify-content-center mt-1">
+              <img class="card-img-top image" [src]="product.file" alt="{{ product.productName }}">
+            </div>
+            <div class="card-body">
+              <p class="card-title">{{ product.productname }}</p>
+              <div class="location">
+                <p>{{ product.city }},</p>
+                <p>{{ product.state }}</p>
+              </div>
+              <p class="card-text">Rs {{ product.price }}</p>
+              <p class="text-muted">{{ product.companydetails }}</p>
+              <button style="background-color: #068076; color: white; font-weight: bold;"  (click)="onGetPrice(product)">Get Best Price</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-2 m-md-3" *ngFor="let product of products | slice:3:4">
+          <div class="card">
+            <div class="d-flex justify-content-center mt-1">
+              <img class="card-img-top image" [src]="product.file" alt="{{ product.productName }}">
+            </div>
+            <div class="card-body">
+              <p class="card-title">{{ product.productname }}</p>
+              <div class="location">
+                <p>{{ product.city }},</p>
+                <p>{{ product.state }}</p>
+              </div>
+              <p class="card-text">Rs {{ product.price }}</p>
+              <p class="text-muted">{{ product.companydetails }}</p>
+              <button style="background-color: #068076; color: white; font-weight: bold;"  (click)="onGetPrice(product)">Get Best Price</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-2 m-md-3" *ngFor="let product of products  | slice:4:5">
+          <div class="card">
+            <div class="d-flex justify-content-center mt-1">
+              <img class="card-img-top image" [src]="product.file" alt="{{ product.productName }}">
+            </div>
+            <div class="card-body">
+              <p class="card-title">{{ product.productname }}</p>
+              <div class="location">
+                <p>{{ product.city }},</p>
+                <p>{{ product.state }}</p>
+              </div>
+              <p class="card-text">Rs {{ product.price }}</p>
+              <p class="text-muted">{{ product.companydetails }}</p>
+              <button style="background-color: #068076; color: white; font-weight: bold;"  (click)="onGetPrice(product)">Get Best Price</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+      <div class="modal fade" id="productDetailsModal" tabindex="-1" aria-labelledby="productDetailsModalLabel" aria-hidden="true">
+        <div class="modal-dialog" style=" max-width: 600px; " >
+          <div class="modal-content" style="min-height: 500px; width: 800px; overflow-y: auto; max-height: 90vh;">
+            <div class="modal-header">
+              
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" style=" min-height: 400px;">
+              <div class="row">
+                <!-- Left Section - Product Image -->
+                <div class="col-md-4">
+                  <img style="height: 210px; width: 220px;" [src]="selectedProduct?.file" alt="Product Image" class="img-fluid" />
+                  
+                  <p class="product-name" >{{ selectedProduct?.productname }}</p>
+                  <p class="product-price" > ₹{{ selectedProduct?.price }}</p>
+                  <p class="product-details">Shipping: {{selectedProduct?.shippingoption}}</p>
+                  <p class="product-details">Tax: {{selectedProduct?.taxoption}}</p>
+                  <p class="seller-name">Sold By: {{soldby}}</p>
+                  <p>{{selectedProduct?.productdescription}}</p>
+                  <div class="icon-container">
+                    <!-- YouTube Icon -->
+                    <fa-icon *ngIf="selectedProduct?.youtubelink"  [icon]="faYoutube" class="youtube-icon"  
+                    (click)="openYouTube(selectedProduct?.youtubelink)"></fa-icon>
+                    
+                    <!-- PDF Icon -->
+                    <fa-icon *ngIf="selectedProduct?.pdffile" [icon]="faFilePdf" 
+                    class="pdf-icon" (click)="openPDF(selectedProduct?.pdffile)"></fa-icon>
+                  </div>
+                  <br>
+                  <p>Contact Number {{selectedProduct?.mobilenumber}}</p>
+                  </div>
+                <!-- Right Section - Product Details and Form -->
+                <div class="col-md-8">
+                  <h6><span style="font-weight: bold;">Contact Seller </span>by adding a few details of your requirement</h6>
+
+
+                  <form (ngSubmit)="submitForm()">
+                    <div class="mb-3"> 
+                      <label for="quantity" class="form-label " >Quantity</label>
+                      <div class="input-group position-relative" >
+                        <input type="text" id="quantity" [(ngModel)]="formData.quantity" name="quantity" class="form-control">
+                        <button (click)="toggleDropdownunit()" style="background-color: #068076; color: white;" class="btn btn-outline-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
+                          Select Unit
+                        </button>
+                        <ul *ngIf="isUnitOpen" class="dropdown-menu custom-dropdown d-none position-absolute" aria-labelledby="dropdownMenuButton">
+                          <li *ngFor="let unit of units">
+                            <button type="button" class="dropdown-item" (click)="selectUnit(unit)">{{ unit }}</button>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+      
+                    <div class="mb-3">
+                      <label for="requirementDetails" class="form-label">Requirement Details</label>
+                      <textarea id="requirementDetails" [(ngModel)]="formData.requirementDetails" name="requirementDetails" class="form-control" rows="3" placeholder="Additional details about your requirement..."></textarea>
+                    </div>
+      
+                    <div class="mb-3">
+                      <label for="gstNumber" class="form-label">GST Number</label>
+                      <input type="text" id="Quantity" [(ngModel)]="formData.gstNumber" name="gstNumber" class="form-control">
+                    </div>
+      
+                    <button type="submit" style="background-color: #009688;;" class="btn btn-primary w-100">Submit</button>
+                  </form>
+
+                  
+                </div>
+      
+                </div>
+              </div>
+            </div>
+          
+          </div>
+        </div>
+      </div>
+        
+
+
+
+
+
+
+
+
+<!-- //Categories -->
+  <div class="inner container m-3" style="background-color: white;">
+    <div class="row"></div>
+      <div class="col-md-5 offset-md-2">
+          <p style="font-weight: bold;">Categories You May Like <a href="#">View All ></a></p>
+      </div>
+
+      <div class="row">
+        <div class="col-md-2 m-md-3">
+          <div class="card" style="width: 15rem; height: 20rem;">
+            <div class="d-flex justify-content-center mt-1">
+              <img class="card-img-top image" src="indiamart_images_for_postman/genericmedicines.png"  alt="">
+            </div>
+            <div class="card-body text-center">
+              <p class="card-title">Generic Medicines</p>
+              <button style="background-color: #068076; color: white; font-weight: bold;">Get Quotes</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-2 m-md-3">
+          <div class="card" style="width: 15rem; height: 20rem;">
+            <div class="d-flex justify-content-center mt-1">
+              <img class="card-img-top image" src="indiamart_images_for_postman/surgical-gloves.png"  alt="">
+            </div>
+            <div class="card-body text-center">
+              <p class="card-title">Surgical Gloves</p>
+              <button style="background-color: #068076; color: white; font-weight: bold;">Get Quotes</button>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="col-md-2 m-md-3">
+          <div class="card" style="width: 15rem; height: 20rem;">
+            <div class="d-flex justify-content-center mt-1">
+              <img class="card-img-top image" src="indiamart_images_for_postman/decorative-wall-panel.png"  alt="">
+            </div>
+            <div class="card-body text-center">
+              <p class="card-title">Decorative Wall Panel</p>
+              <button style="background-color: #068076; color: white; font-weight: bold;">Get Quotes</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-2 m-md-3">
+          <div class="card" style="width: 15rem; height: 20rem;">
+            <div class="d-flex justify-content-center mt-1">
+              <img class="card-img-top image" src="indiamart_images_for_postman/basmati-rice.png"  alt="">
+            </div>
+            <div class="card-body text-center">
+              <p class="card-title">Basmati Rice</p>
+              <button style="background-color: #068076; color: white; font-weight: bold;">Get Quotes</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-2 m-md-3">
+          <div class="card" style="width: 15rem; height: 20rem;">
+            <div class="d-flex justify-content-center mt-1">
+              <img class="card-img-top image" src="indiamart_images_for_postman/flex-printing-machine.png"  alt="">
+            </div>
+            <div class="card-body text-center">
+              <p class="card-title">Flex Printing Machine</p>
+              <button style="background-color: #068076; color: white; font-weight: bold;">Get Quotes</button>
+            </div>
+          </div>
+        </div>
+
+       
+          
+      </div>
+  </div>
+</div>
