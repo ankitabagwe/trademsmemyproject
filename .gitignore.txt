@@ -1,0 +1,15 @@
+# Angular
+/frontend/node_modules
+/frontend/dist
+
+# Eclipse/Spring Boot
+/backend/target
+/backend/.settings/
+*.class
+*.log
+
+# General
+.vscode/
+.idea/
+*.iml
+.DS_Store
