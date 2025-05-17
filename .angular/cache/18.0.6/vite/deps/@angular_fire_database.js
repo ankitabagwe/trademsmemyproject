@@ -29,12 +29,12 @@ import {
   stringLength as stringLength2,
   stringToByteArray as stringToByteArray2,
   stringify as stringify2
-} from "./chunk-JDRZRN4E.js";
-import "./chunk-L6V5WDIY.js";
+} from "./chunk-6V2AFMXW.js";
+import "./chunk-GMSH2UAE.js";
 import {
   FirebaseApp,
   FirebaseApps
-} from "./chunk-ZY7VATET.js";
+} from "./chunk-34TLZZA4.js";
 import {
   VERSION,
   ɵAngularFireSchedulers,
@@ -42,7 +42,7 @@ import {
   ɵgetAllInstancesOf,
   ɵgetDefaultInstanceOf,
   ɵzoneWrap
-} from "./chunk-NUS2QU3X.js";
+} from "./chunk-TQPWU2DO.js";
 import {
   Component,
   ComponentContainer,
@@ -79,7 +79,7 @@ import {
   stringLength,
   stringToByteArray,
   stringify
-} from "./chunk-POXC4GFT.js";
+} from "./chunk-X2KQ4YN2.js";
 import {
   InjectionToken,
   Injector,
@@ -90,7 +90,7 @@ import {
   setClassMetadata,
   ɵɵdefineInjector,
   ɵɵdefineNgModule
-} from "./chunk-US66NKEY.js";
+} from "./chunk-NACROFVK.js";
 import {
   Observable,
   concatMap,
@@ -106,13 +106,13 @@ import {
   switchMap,
   timer,
   withLatestFrom
-} from "./chunk-K3ITVDYE.js";
-import "./chunk-WYUCVM5J.js";
+} from "./chunk-DCQSYBDC.js";
+import "./chunk-VRZ4IISE.js";
 import {
   __async
 } from "./chunk-47AXDMZD.js";
 
-// node_modules/@firebase/database/dist/index.esm2017.js
+// ../node_modules/@firebase/database/dist/index.esm2017.js
 var name = "@firebase/database";
 var version = "1.0.10";
 var SDK_VERSION3 = "";
@@ -8681,7 +8681,7 @@ PersistentConnection.prototype.echo = function(data, onEcho) {
 };
 registerDatabase();
 
-// node_modules/rxfire/database/index.esm.js
+// ../node_modules/rxfire/database/index.esm.js
 var _a;
 var ListenEvent;
 (function(ListenEvent2) {
@@ -8932,7 +8932,7 @@ function waitForLoaded(query3, snap$) {
   );
 }
 
-// node_modules/@angular/fire/node_modules/@firebase/database/dist/index.esm2017.js
+// ../node_modules/@angular/fire/node_modules/@firebase/database/dist/index.esm2017.js
 var name2 = "@firebase/database";
 var version2 = "1.0.8";
 var SDK_VERSION4 = "";
@@ -18595,7 +18595,7 @@ function _initStandalone({ app, url, version: version3, customAuthImpl, customAp
 }
 registerDatabase2();
 
-// node_modules/@angular/fire/fesm2022/angular-fire-database.mjs
+// ../node_modules/@angular/fire/fesm2022/angular-fire-database.mjs
 var Database3 = class {
   constructor(database) {
     return database;

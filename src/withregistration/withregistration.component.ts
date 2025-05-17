@@ -19,6 +19,7 @@ import { ChatserviceService } from '../chatservice.service';
 import { faYoutube } from '@fortawesome/free-brands-svg-icons';
 import { faFilePdf } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { environment } from '../environments/environment';
 
 
 @Component({
@@ -96,8 +97,7 @@ this.isUnitOpen = !this.isUnitOpen;
     this.mobileNumber= this.myServiceService.getMobileNumber();
     console.log(this.mobileNumber);
   
-    this.http
-          .get<any>(`http://localhost:8081/details/${this.mobileNumber}`)
+    this.http.get<any>(`${environment.apiBaseUrl}/details/${this.mobileNumber}`)
           .subscribe(
             (response) => {
               this.buyerName = response.name;

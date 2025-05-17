@@ -12,9 +12,9 @@ export class ProductserviceService {
   private email: string = '';
 
 //posting product data to eclipse(springboot)
-private apiUrl = 'http://localhost:8081/addproducts'; 
-private apiurl2 = 'http://localhost:8081/getproductbymobile'
-private apiurl3 = 'http://localhost:8081/deleteproduct'
+private apiUrl = '${environment.apiBaseUrl}/addproducts'; 
+private apiurl2 = '${environment.apiBaseUrl}/getproductbymobile'
+private apiurl3 = '${environment.apiBaseUrl}/deleteproduct'
 
   constructor(private http : HttpClient) { }
 

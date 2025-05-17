@@ -21,6 +21,7 @@ import  firebase from '@angular/fire';
 import { FirebaseApp } from '@angular/fire/app';
 
 import { AngularFireModule } from '@angular/fire/compat';
+import { environment } from '../../../environments/environment';
 
 
 
@@ -98,7 +99,7 @@ export class BodyComponent {
       return;
     }
 
-    this.http.get<any>(`http://localhost:8081/details/${this.mobileNumber}`).subscribe(
+    this.http.get<any>(`${environment.apiBaseUrl}/details/${this.mobileNumber}`).subscribe(
             (response) => {
               if (response && response.token) {
                
@@ -128,7 +129,7 @@ export class BodyComponent {
       console.log("Sending OTP to:", mobileNumber);
       // this.myServiceService.setMobileNumber(this.mobileNumber); //testing
       // this.router.navigateByUrl("app-withregistration"); //testing
-      this.http.get(`http://localhost:8081/send-otp/${this.mobileNumber}`, { observe: 'response' })
+      this.http.get(`${environment.apiBaseUrl}/send-otp/${this.mobileNumber}`, { observe: 'response' })
         .subscribe({
           next: (response: HttpResponse<any>) => {
             if (response.status === 200) {
@@ -155,7 +156,7 @@ export class BodyComponent {
     }
     console.log(this.otp);
     const token = localStorage.getItem('authToken');
-      this.http.post(`http://localhost:8081/verify-otp`, {
+      this.http.post(`${environment.apiBaseUrl}/verify-otp`, {
         mobileNumber: this.mobileNumber,
         otp: this.otp
       }).subscribe({
@@ -339,7 +340,7 @@ export class BodyComponent {
 
  //1) handeling login logic
   // login(mobileNumber: string) {
-  //   this.http.post('http://localhost:8081/loginn', {mobileNumber}, { responseType: 'text',withCredentials: true }).subscribe(
+  //   this.http.post('${environment.apiBaseUrl}/loginn', {mobileNumber}, { responseType: 'text',withCredentials: true }).subscribe(
   //     (response) => {
   //       // console.log('Login successful' + response);
   //       this.service.setLoginStatus(true); // Update login status

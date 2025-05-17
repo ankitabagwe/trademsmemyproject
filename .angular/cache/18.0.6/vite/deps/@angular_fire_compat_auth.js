@@ -1,8 +1,4 @@
-import "./chunk-4VZE7OPP.js";
-import "./chunk-L6V5WDIY.js";
-import {
-  FirebaseApp
-} from "./chunk-ZY7VATET.js";
+import "./chunk-HQZIC7PG.js";
 import {
   FIREBASE_APP_NAME,
   FIREBASE_OPTIONS,
@@ -10,10 +6,14 @@ import {
   ɵcacheInstance,
   ɵfirebaseAppFactory,
   ɵlazySDKProxy
-} from "./chunk-HSVZJ2PR.js";
+} from "./chunk-MSNPAMH7.js";
 import {
   firebase
-} from "./chunk-6BH2G4JQ.js";
+} from "./chunk-Y4Y6B2JE.js";
+import "./chunk-GMSH2UAE.js";
+import {
+  FirebaseApp
+} from "./chunk-34TLZZA4.js";
 import {
   VERSION,
   keepUnstableUntilFirst,
@@ -23,7 +23,7 @@ import {
   ɵgetAllInstancesOf,
   ɵgetDefaultInstanceOf,
   ɵzoneWrap
-} from "./chunk-NUS2QU3X.js";
+} from "./chunk-TQPWU2DO.js";
 import {
   Component,
   Deferred,
@@ -38,10 +38,10 @@ import {
   isIndexedDBAvailable,
   registerVersion,
   uuidv4
-} from "./chunk-POXC4GFT.js";
+} from "./chunk-X2KQ4YN2.js";
 import {
   isPlatformServer
-} from "./chunk-X2TJLKA2.js";
+} from "./chunk-FL3SALFX.js";
 import {
   Inject,
   Injectable,
@@ -55,7 +55,7 @@ import {
   ɵɵdefineInjector,
   ɵɵdefineNgModule,
   ɵɵinject
-} from "./chunk-US66NKEY.js";
+} from "./chunk-NACROFVK.js";
 import {
   Observable,
   Subject,
@@ -73,13 +73,13 @@ import {
   switchMap,
   switchMapTo,
   timer
-} from "./chunk-K3ITVDYE.js";
-import "./chunk-WYUCVM5J.js";
+} from "./chunk-DCQSYBDC.js";
+import "./chunk-VRZ4IISE.js";
 import {
   __async
 } from "./chunk-47AXDMZD.js";
 
-// node_modules/@angular/fire/node_modules/@firebase/app-check/dist/esm/index.esm2017.js
+// ../node_modules/@angular/fire/node_modules/@firebase/app-check/dist/esm/index.esm2017.js
 var APP_CHECK_STATES = /* @__PURE__ */ new Map();
 var DEFAULT_STATE = {
   activated: false,
@@ -826,7 +826,7 @@ function registerAppCheck() {
 }
 registerAppCheck();
 
-// node_modules/@angular/fire/fesm2022/angular-fire-app-check.mjs
+// ../node_modules/@angular/fire/fesm2022/angular-fire-app-check.mjs
 var AppCheck = class {
   constructor(appCheck) {
     return appCheck;
@@ -877,7 +877,7 @@ var initializeAppCheck2 = ɵzoneWrap(initializeAppCheck, true);
 var onTokenChanged2 = ɵzoneWrap(onTokenChanged, true);
 var setTokenAutoRefreshEnabled2 = ɵzoneWrap(setTokenAutoRefreshEnabled, true);
 
-// node_modules/@angular/fire/fesm2022/angular-fire-compat-auth.mjs
+// ../node_modules/@angular/fire/fesm2022/angular-fire-compat-auth.mjs
 var proxyPolyfillCompat = {
   name: null,
   config: null,
@@ -967,7 +967,7 @@ var AngularFireAuth = class _AngularFireAuth {
   credential;
   constructor(options, name2, platformId, zone, schedulers, useEmulator, settings, tenantId, languageCode, useDeviceLanguage, persistence, _appCheckInstances) {
     const logins = new Subject();
-    const auth = of(void 0).pipe(observeOn(schedulers.outsideAngular), switchMap(() => zone.runOutsideAngular(() => import("./index.esm-AWPITNTV.js"))), map(() => ɵfirebaseAppFactory(options, zone, name2)), map((app) => ɵauthFactory(app, zone, useEmulator, tenantId, languageCode, useDeviceLanguage, settings, persistence)), shareReplay({
+    const auth = of(void 0).pipe(observeOn(schedulers.outsideAngular), switchMap(() => zone.runOutsideAngular(() => import("./index.esm-QK5JXJOR.js"))), map(() => ɵfirebaseAppFactory(options, zone, name2)), map((app) => ɵauthFactory(app, zone, useEmulator, tenantId, languageCode, useDeviceLanguage, settings, persistence)), shareReplay({
       bufferSize: 1,
       refCount: false
     }));

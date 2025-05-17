@@ -8,8 +8,8 @@ import { HttpClient } from '@angular/common/http';
 })
 export class ChatserviceService {
 
-  private baseUrl = 'http://localhost:8081/details';
-  private baseUrl2 = 'http://localhost:8081/buissnessdetails';
+  private baseUrl = '${environment.apiBaseUrl}/details';
+  private baseUrl2 = '${environment.apiBaseUrl}/buissnessdetails';
   
   constructor(private db: Database,private http: HttpClient) { }
 

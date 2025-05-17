@@ -1,6 +1,6 @@
 export const environment = {
-    production: false,
-
+    production: true,
+ apiBaseUrl: 'https://65.0.71.91',
     firebaseConfig :{
        apiKey: "AIzaSyB6h6rtopYa1WkQywriFFpciPaYBCea5yA",
        authDomain: "indiamartchat-b4b82.firebaseapp.com",

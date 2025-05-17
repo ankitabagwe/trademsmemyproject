@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 import { FetchProductService } from '../app/services/fetchproduct/fetch-product.service';
 import { SellerservicesService } from '../app/sellertool/sellertoolservice/sellerservices.service';
 import { HttpClient } from '@angular/common/http';
+import { environment } from '../environments/environment';
 
 @Component({
   selector: 'app-profile',
@@ -108,7 +109,7 @@ this.FetchproductService.getSellerByMobile(this.mobileNumber).subscribe((data:an
   }
 
   updateSellerData(){
-  this.http.put(`http://localhost:8081/sellerupdate/${this.sellerData.mobilenumber}`,this.sellerData,{ responseType: 'text' }).subscribe(response => {
+  this.http.put(`${environment.apiBaseUrl}/sellerupdate/${this.sellerData.mobilenumber}`,this.sellerData,{ responseType: 'text' }).subscribe(response => {
     console.log("Seller data updated successfully!", response);
     this.fetchSellerDetails();
   }, error => {
@@ -140,7 +141,7 @@ this.FetchproductService.getSellerByMobile(this.mobileNumber).subscribe((data:an
       bankname: this.bank.bankname || this.sellerDataadditional.bankname
     };
   
-    this.http.put(`http://localhost:8081/sellerupdateadditional/${this.mobileNumber}`, updatedDetails, { responseType: 'text' }).subscribe(response => {
+    this.http.put(`${environment.apiBaseUrl}/sellerupdateadditional/${this.mobileNumber}`, updatedDetails, { responseType: 'text' }).subscribe(response => {
       console.log("Business details updated successfully!", response);
       this.fetchSellerDetailsadditional();
     }, error => {
@@ -153,7 +154,7 @@ this.FetchproductService.getSellerByMobile(this.mobileNumber).subscribe((data:an
     //   ...this.bank
     // };
 
-    // this.http.put(`http://localhost:8081/sellerupdateadditional/${this.mobileNumber}`, updatedDetails,{ responseType: 'text' }).subscribe(response => {
+    // this.http.put(`${environment.apiBaseUrl}/sellerupdateadditional/${this.mobileNumber}`, updatedDetails,{ responseType: 'text' }).subscribe(response => {
     //   console.log("Business details updated successfully!", response);
     // }, error => {
     //   console.error("Error updating business details", error);

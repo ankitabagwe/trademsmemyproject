@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { BehaviorSubject } from 'rxjs';
+import { environment } from '../../../environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +12,7 @@ private mobilenumber: any;
 
 constructor(private http: HttpClient) { }
 getSellerInquiries(sellerMobileNumber: string) {
-  return this.http.get<any[]>(`http://localhost:8081/getSellerInquiries?sellerMobileNumber=${sellerMobileNumber}`);
+  return this.http.get<any[]>(`${environment.apiBaseUrl}/getSellerInquiries?sellerMobileNumber=${sellerMobileNumber}`);
 }
 
 setData(mobilenumber: any): void {

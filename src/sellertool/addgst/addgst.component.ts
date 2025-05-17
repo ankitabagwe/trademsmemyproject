@@ -7,6 +7,7 @@ import { SellerservicesService } from '../../app/sellertool/sellertoolservice/se
 import { FetchProductService } from '../../app/services/fetchproduct/fetch-product.service';
 import { NavbarComponent } from '../sellerbody/navbar/navbar.component';
 import { HttpClient } from '@angular/common/http';
+import { environment } from '../../environments/environment';
 
 @Component({
   selector: 'app-addgst',
@@ -93,7 +94,7 @@ this.router.navigateByUrl("app-sellerbody/dashboard");
         bankname: ''
       };
 
-      this.http.put(`http://localhost:8081/sellerupdateadditional/${data.mobilenumber}`,data,{ responseType: 'text' }).subscribe(response => {
+      this.http.put(`${environment.apiBaseUrl}/sellerupdateadditional/${data.mobilenumber}`,data,{ responseType: 'text' }).subscribe(response => {
         console.log("Business details updated successfully!", response);
       }, error => {
         console.error("Error updating business details", error);

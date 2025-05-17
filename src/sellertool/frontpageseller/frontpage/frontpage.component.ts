@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { Router, RouterLink, RouterModule, RouterOutlet } from '@angular/router';
 import { HttpClient, HttpResponse } from '@angular/common/http';
+import { environment } from '../../../environments/environment';
 
 @Component({
   selector: 'app-frontpage',
@@ -28,7 +29,7 @@ export class FrontpageComponent {
   }
     
      
-     this.http.get<boolean>(`http://localhost:8081/checkMobileNumber?mobilenumber=${this.mobileNumber}`)
+     this.http.get<boolean>(`${environment.apiBaseUrl}/checkMobileNumber?mobilenumber=${this.mobileNumber}`)
      .subscribe(isRegistered => {
        if (isRegistered) {
          // If the mobile number is registered, navigate to seller body
@@ -51,7 +52,7 @@ export class FrontpageComponent {
 
    sendOTP(mobileNumber:string){
          console.log("Sending OTP to:", mobileNumber);
-         this.http.get(`http://localhost:8081/sendotp/${this.mobileNumber}`, { observe: 'response' })
+         this.http.get(`${environment.apiBaseUrl}/sendotp/${this.mobileNumber}`, { observe: 'response' })
         .subscribe({
           next: (response: HttpResponse<any>) => {
             if (response.status === 200) {
@@ -75,7 +76,7 @@ export class FrontpageComponent {
    return;
  }
  const token = localStorage.getItem('authToken');
-   this.http.post(`http://localhost:8081/verifyotp`, {
+   this.http.post(`${environment.apiBaseUrl}/verifyotp`, {
      mobileNumber: this.mobileNumber,
      otp: this.otp
    }).subscribe({

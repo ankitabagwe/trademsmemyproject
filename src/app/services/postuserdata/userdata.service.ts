@@ -8,9 +8,9 @@ import { BehaviorSubject, Observable } from 'rxjs';
 export class UserdataService {
 
 
-  private apiUrl = 'http://localhost:8081/userprofile';
-  private apiUrl1 = 'http://localhost:8081/gstdetails';
-  private apiUrl2 = 'http://localhost:8081/getsellerdetailsforchat';
+  private apiUrl = '${environment.apiBaseUrl}/userprofile';
+  private apiUrl1 = '${environment.apiBaseUrl}/gstdetails';
+  private apiUrl2 = '${environment.apiBaseUrl}/getsellerdetailsforchat';
 
   constructor(private http:HttpClient) { }
 

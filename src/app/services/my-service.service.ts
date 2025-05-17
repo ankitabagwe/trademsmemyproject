@@ -28,7 +28,7 @@ export class MyServiceService {
   }
   
   
-  private url = "http://localhost:8081/buisnessdetails";
+  private url = "${environment.apiBaseUrl}/buisnessdetails";
   
   constructor(private http:HttpClient) {}
 

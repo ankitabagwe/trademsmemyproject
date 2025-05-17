@@ -7,12 +7,12 @@ import { HttpClient } from '@angular/common/http'
 })
 export class FetchProductService {
 
-  private apiUrl = 'http://localhost:8081/search'; 
-  private apiurl1 = 'http://localhost:8081/random';
- private apiurl2 = 'http://localhost:8081/login';
- private apiurl3 = 'http://localhost:8081/sendtoseller';
-private apiurl4 = 'http://localhost:8081/getbuissnessdata';
-private apiUrl5 = 'http://localhost:8081/sellerupdateadditional/updateadditional';
+  private apiUrl = '${environment.apiBaseUrl}/search'; 
+  private apiurl1 = '${environment.apiBaseUrl}/random';
+ private apiurl2 = '${environment.apiBaseUrl}/login';
+ private apiurl3 = '${environment.apiBaseUrl}/sendtoseller';
+private apiurl4 = '${environment.apiBaseUrl}/getbuissnessdata';
+private apiUrl5 = '${environment.apiBaseUrl}/sellerupdateadditional/updateadditional';
 
 
  private loginStatus = new BehaviorSubject<boolean>(false);
@@ -36,7 +36,7 @@ private apiUrl5 = 'http://localhost:8081/sellerupdateadditional/updateadditional
     const requestdata = { query, mobileNumber };
 
     // Send the POST request
-    this.http.post<any>('http://localhost:8081/sendtobuyleads', requestdata).subscribe(
+    this.http.post<any>('${environment.apiBaseUrl}/sendtobuyleads', requestdata).subscribe(
       (data) => {
         // Update the shared data
         this.responseSubject.next(data);
